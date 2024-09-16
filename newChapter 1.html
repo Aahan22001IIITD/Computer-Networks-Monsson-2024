@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions">
   <head>
-    <title>Chapter 1</title>
+    <title>No title</title>
     <meta content="TeXmacs 2.1.4" name="generator" charset="utf-8"></meta>
     <style type="text/css">
       body { text-align: justify } h5 { display: inline; padding-right: 1em }
@@ -35,10 +35,10 @@
   </head>
   <body>
     <p>
-      <span style="margin-left: 8em"></span>Computer Networks Chapter 1 Monsoon 2024
+      <span style="margin-left: 10em"></span>Computer Networks Chapter 1 Monsoon 2024
     </p>
     <p>
-      <span style="margin-left: 10em"></span>By Aahan Piplani CSAM (2022001)
+      <span style="margin-left: 12em"></span>By Aahan Piplani CSAM (2022001)
     </p>
     <h2 id="auto-1">1<span style="margin-left: 1em"></span>What is Internet<span style="margin-left: 1em"></span></h2>
     <p>
@@ -318,15 +318,6 @@
     <p>
       
     </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      
-    </p>
     <h3 id="auto-13">How Port Addresses Work:<span style="margin-left: 1em"></span></h3>
     <ul>
       <ol>
@@ -547,6 +538,315 @@
     </p>
     <h2 id="auto-19">3<span style="margin-left: 1em"></span>Network design<span style="margin-left: 1em"></span></h2>
     <h3 id="auto-20">3.1<span style="margin-left: 1em"></span>Packet Switching<span style="margin-left: 1em"></span></h3>
+    <p>
+      When we send data from the source to the destination , we use packets to
+      do that ,and how do they travel ?
+    </p>
+    <p>
+      they travel by packet switchers ( routers and link-layer switches ) ,
+      packets are transmitted through that switch.So, if a source end system
+      or a packet switch is sending a packet of L bits over a link with
+      transmission rate R bits/sec, then the time to transmit the packet is L
+      /R seconds.
+    </p>
+    <h3 id="auto-21">3.2<span style="margin-left: 1em"></span>Store-and-Forward Transmission<span style="margin-left: 1em"></span></h3>
+    <p>
+      A figure below explains , store and forward transmission .
+    </p>
+    <p>
+      <img src="newChapter 1-1.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 5.67015789473684em"></img> 
+    </p>
+    <p>
+      Storing the bits in the packet switcher and holding it to move it
+      forward
+    </p>
+    <p>
+      Because the router employs store-and-forwarding, at this instant of
+      time, the router cannot transmit the bits it has received; instead it
+      must first buffer (i.e., &ldquo;store&rdquo;) the packet's bits. Only
+      after the router has received all of the packet's bits can it begin to
+      transmit (i.e., &ldquo;forward&rdquo;) the packet onto the outbound
+      link.
+    </p>
+    <p>
+      The time to transmit the packet from the client / server to the network
+      is called <span class="no-breaks"><img src="newChapter 1-2.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img>.</span>
+    </p>
+    <p>
+      <img src="newChapter 1-3.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img> = L/R. where L bits is the size of each packet
+      and R is Tranmission rate.
+    </p>
+    <p>
+      So if there are just Two packets , it will take us 2L/R time (assuming
+      they reach the destination as soon as they start <span class="no-breaks"><img src="newChapter 1-4.png"
+      style="margin-left: -0.0134736842105263em; margin-bottom: -0.0242631578947368em; margin-right: -0.0134736842105259em; margin-top: -0.0216842105263158em; vertical-align: -0.218263157894737em; height: 1.03747368421053em"></img>)</span> 
+    </p>
+    <p>
+      Simlarly for N packets and N-1 links , it will take NL/R secs for all
+      the packets to reach the destination.
+    </p>
+    <p>
+      <img src="newChapter 1-6.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 16.7440526315789em"></img>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Each packet will have multiple links attached to it , the packet switch
+      has an output buffer which stores the packets that the router is about
+      to send into that link . If the arriving packet finds the link busy with
+      the transmission of some another packet , then the arriving packey must
+      wait in the output buffer , this suffer delays as well , which are also
+      called as <b>Queuing delays.</b>
+    </p>
+    <p>
+      if arriving packet may find that the buffer is completely full with
+      other packets waiting for transmission. In this case, <b>packet loss</b>
+      will occur.
+    </p>
+    <h4 id="auto-22">3.2.1<span style="margin-left: 1em"></span>Virtual Packet Switching<span style="margin-left: 1em"></span></h4>
+    <h3 id="auto-23">3.3<span style="margin-left: 1em"></span>Circuit Switching <span style="margin-left: 1em"></span></h3>
+    <p>
+      In <strong>circuit-switched networks</strong>, resources like
+      transmission rate and buffers are reserved for the entire duration of a
+      communication session between two end systems, similar to making a
+      reservation at a restaurant. Traditional telephone networks are an
+      example, where a dedicated end-to-end connection (or circuit) is
+      established before data transfer, ensuring a guaranteed constant
+      transmission rate.
+    </p>
+    <p>
+      In contrast, <strong>packet-switched networks</strong> (such as the
+      Internet) do not reserve resources. Data is sent as packets without
+      guaranteed access to transmission resources, meaning packets may
+      experience delays if links are congested. The Internet operates on a
+      &ldquo;best effort&rdquo; basis, trying to deliver packets as quickly as
+      possible without guarantees.
+    </p>
+    <h4 id="auto-24">3.3.1<span style="margin-left: 1em"></span>Packet vs Circuit<span style="margin-left: 1em"></span></h4>
+    <p>
+      <img src="newChapter 1-7.png" style="margin-left: -0.055em; margin-bottom: -0.0549999999999997em; margin-right: -0.0549999999999997em; margin-top: -0.0550000000000015em; vertical-align: -12.8553421052632em; height: 26.3263684210526em"></img>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <h3 id="auto-25">3.4<span style="margin-left: 1em"></span>Delay and Losses.<span style="margin-left: 1em"></span></h3>
+    <p>
+      In computer networking, several types of delays affect how packets
+      traverse from one router to another. Understanding these delays is
+      crucial for optimizing network performance. Here's a summary of the
+      different delays:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Processing Delay</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Definition</strong>: The time required by a router to
+              process a packet's header, check for errors, and determine where
+              to forward the packet.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Typical Duration</strong>: Usually in microseconds or
+              less in high-speed routers.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Impact</strong>: Generally minor but can affect a
+              router's throughput.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Queuing Delay</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Definition</strong>: The time a packet spends waiting in
+              a queue before it can be transmitted onto the link.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Factors</strong>: Depends on the number of packets ahead
+              in the queue and network traffic intensity.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Typical Duration</strong>: Can range from microseconds
+              to milliseconds.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Impact</strong>: Can vary significantly based on network
+              load and traffic patterns.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Transmission Delay</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Definition</strong>: The time required to push all bits
+              of a packet into the link. Calculated as the packet length (L)
+              divided by the link's transmission rate (R).
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Example</strong>: For a 10 Mbps link, it takes longer
+              than for a 100 Mbps link to transmit the same packet.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Typical Duration</strong>: Typically in microseconds to
+              milliseconds.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Impact</strong>: Dependent on packet size and link
+              speed.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Propagation Delay</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Definition</strong>: The time it takes for a bit to
+              travel from one router to the next, based on the distance
+              between them and the speed of the signal through the medium.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Calculation</strong>: Distance (d) divided by the
+              propagation speed (s) of the link.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Typical Duration</strong>: Ranges from microseconds to
+              milliseconds, but can be longer in wide-area networks.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Impact</strong>: Dependent on distance and physical
+              medium of the link.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h3 id="auto-26">Comparing Transmission and Propagation Delay<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          <strong>Transmission Delay</strong>: Affects how quickly a router
+          can push packets onto the link, independent of distance. It depends
+          on packet length and link speed.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Propagation Delay</strong>: Affects how quickly a signal
+          travels over a distance, independent of packet size or link speed.
+        </p>
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <p>
+      <strong>Nodal Delay</strong>:
+    </p>
+    <ul>
+      <li>
+        <p>
+          This is the delay experienced at each router and includes:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Processing Delay</strong> (<span class="no-breaks"><img src="newChapter 1-8.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.313842105263158em; height: 1.12444736842105em"></img>):</span>
+              Time to process the packet's header and check for errors.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Transmission Delay</strong> (<span class="no-breaks"><img src="newChapter 1-9.png"
+              style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img>):</span> Time to push all packet bits onto the
+              link, given by <span class="no-breaks"><img src="newChapter 1-10.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0157368421052632em; margin-right: -0.0134736842105263em; margin-top: -0.0135em; vertical-align: -0.280684210526316em; height: 1.152em"></img>,</span>
+              where <span class="no-breaks"><img src="newChapter 1-11.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105264em; margin-top: -0.0142368421052631em; vertical-align: 0em; height: 0.794947368421053em"></img>L</span> is the packet
+              size and <span class="no-breaks"><img src="newChapter 1-12.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0404210526315789em; margin-right: -0.0134736842105263em; margin-top: -0.0142368421052631em; vertical-align: 0em; height: 0.821894736842105em"></img>R</span> is the
+              link's transmission rate.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Propagation Delay</strong> (<span class="no-breaks"><img src="newChapter 1-13.png"
+              style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.313842105263158em; height: 1.12444736842105em"></img>):</span> Time for a signal to travel over the
+              link, calculated as <span class="no-breaks"><img src="newChapter 1-14.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0157368421052632em; margin-right: -0.0134736842105263em; margin-top: -0.0135em; vertical-align: -0.280684210526316em; height: 1.152em"></img>,</span>
+              where <img src="newChapter 1-15.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0269473684210526em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: 0em; height: 0.821894736842105em"></img> is the distance and <span class="no-breaks"><img
+              src="newChapter 1-16.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0269473684210526em; margin-right: -0.0134736842105263em; margin-top: -0.028578947368421em; vertical-align: 0em; height: 0.538947368421053em"></img>s</span> is the propagation speed.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      <strong>Total End-to-End Delay</strong>:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Formula</strong>: If there are <span class="no-breaks"><img src="newChapter 1-17.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.101684210526316em; margin-top: -0.0142368421052631em; vertical-align: 0em; height: 0.794947368421053em"></img>N</span>
+          routers between the source and destination, and assuming negligible
+          queuing delays and uniform processing delay at each router, the
+          total end-to-end delay can be expressed as:
+        </p>
+        <center>
+          <img src="newChapter 1-18.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105276em; margin-top: -0.0135em; vertical-align: -0.313842105263158em; height: 1.18507894736842em"></img>
+        </center>
+      </li>
+      <li>
+        <p>
+          This formula aggregates the delays at each hop (router) along the
+          path, including processing, transmission, and propagation delays.
+        </p>
+        <p>
+          
+        </p>
+      </li>
+    </ul>
     <p>
       
     </p>
