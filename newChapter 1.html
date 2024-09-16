@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions">
   <head>
-    <title>No title</title>
+    <title>Computer Networks Monsson 2024</title>
     <meta content="TeXmacs 2.1.4" name="generator" charset="utf-8"></meta>
     <style type="text/css">
       body { text-align: justify } h5 { display: inline; padding-right: 1em }
@@ -34,11 +34,56 @@
     <link href="https://www.texmacs.org/css/web-article-dark-colored.css" type="text/css" rel="stylesheet"></link>
   </head>
   <body>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><font style="font-size: 168.2%"><strong>Computer Networks Monsson
+            2024</strong></font></td>
+          </tr>
+        </table><div class="compact-block" style="margin-top: 1em; margin-bottom: 1em">
+          <table class="title-block">
+            <tr>
+              <td><p style="margin-top: 0.5em; margin-bottom: 0.5em">
+                <div style="display: inline">
+                  <span style="margin-left: 0pt"></span>
+                </div>
+                <table style="display: inline-table; vertical-align: middle">
+                  <tbody><tr>
+                    <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center>
+                      <p>
+                        <class style="font-variant: small-caps">by Aahan Piplani (2022001) </class>
+                      </p>
+                    </center></td>
+                  </tr></tbody>
+                </table>
+              </p><p style="margin-top: 0.5em; margin-bottom: 0.5em">
+                <div style="display: inline">
+                  <span style="margin-left: 0pt"></span>
+                </div>
+                <table style="display: inline-table; vertical-align: middle">
+                  <tbody><tr>
+                    <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center>
+                      <p>
+                        Instructor : Rinku shah 
+                      </p>
+                      <p>
+                        Indraprastha Institute of Information Technology.
+                      </p>
+                    </center></td>
+                  </tr></tbody>
+                </table>
+              </p></td>
+            </tr>
+          </table>
+        </div></td>
+      </tr>
+    </table>
     <p>
-      <span style="margin-left: 10em"></span>Computer Networks Chapter 1 Monsoon 2024
+      <span style="margin-left: 10em"></span><font color="blue"></font><font color="blue"></font>
     </p>
     <p>
-      <span style="margin-left: 12em"></span>By Aahan Piplani CSAM (2022001)
+      <span style="margin-left: 12em"></span>
     </p>
     <h2 id="auto-1">1<span style="margin-left: 1em"></span>What is Internet<span style="margin-left: 1em"></span></h2>
     <p>
@@ -1025,6 +1070,135 @@
     </p>
     <p style="margin-bottom: 1em">
       Server sends some HTML content, browser displays
+    </p>
+    <h4 id="auto-35">3.5.6<span style="margin-left: 1em"></span>ARP AND RARP<span style="margin-left: 1em"></span></h4>
+    <p>
+      <div style="display: inline">
+        <a id="auto-36"></a>
+      </div>
+      <h5>ARP(Address Resolution Protocol) : <span style="margin-left: 1em"></span></h5>
+    </p>
+    <p>
+      ARP is used to find the <strong><b>physical (MAC) address</b></strong>
+      associated with a device's <strong>IP address</strong> on a local
+      network.
+    </p>
+    <p>
+      <strong>Scenario</strong>: Suppose a computer knows the IP address of
+      another device it wants to communicate with, but it needs to know the
+      MAC address (which is used for actual data transmission on the local
+      network).
+    </p>
+    <p style="margin-top: 1em">
+      <strong>Example <class style="font-style: normal">2</class>. </strong>Working
+    </p>
+    <ul style="margin-bottom: 1em">
+      <li>
+        <p>
+          A device sends out an <strong>ARP request</strong> to all devices in
+          the network (a broadcast) asking, &ldquo;Who has this IP
+          address?&rdquo;
+        </p>
+      </li>
+      <li>
+        <p>
+          The device with that IP address responds with its <strong>MAC
+          address</strong> (an <strong>ARP reply</strong>).
+        </p>
+      </li>
+      <li>
+        <p>
+          The requesting device then stores the IP-to-MAC address mapping for
+          future use in its <strong>ARP cache</strong>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <div style="display: inline">
+        <a id="auto-37"></a>
+      </div>
+      <h5>RARP (Reverse Address Resolution Protocol):<span style="margin-left: 1em"></span></h5>
+    </p>
+    <p>
+      RARP is used to find the <strong>IP address</strong> associated with a
+      device's <strong>MAC address</strong>.
+    </p>
+    <p>
+      <strong>Scenario</strong>: RARP is typically used by diskless machines
+      when they first boot up. These machines know their own MAC address but
+      don't know their IP address, so they use RARP to request it.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <h3 id="auto-38">3.6<span style="margin-left: 1em"></span>Modellling of Computer Networks<span style="margin-left: 1em"></span></h3>
+    <p>
+      <em></em>
+    </p>
+    <p>
+      <img src="newChapter 1-22.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 6.04131578947368em"></img>
+    </p>
+    <p>
+      <span class="no-breaks"><img src="newChapter 1-23.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.313842105263158em; height: 1.12444736842105em"></img>=</span> L/s<span style="margin-left: 1em"></span>,
+      <img src="newChapter 1-3.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img> = L/R
+    </p>
+    <p>
+      <img src="newChapter 1-24.png" style="margin-left: -0.0134736842105263em; margin-bottom: 0em; margin-right: -0.0134736842105241em; margin-top: 0em; vertical-align: -14.3223684210526em; height: 28.6447368421053em"></img><span class="no-breaks"><img src="newChapter 1-25.png" style="margin-left: -0.0134736842105263em; margin-bottom: 0em; margin-right: -0.0134736842105241em; margin-top: 0em; vertical-align: -14.3223684210526em; height: 28.6447368421053em"></img>l</span>
+    </p>
+    <p>
+      <img src="newChapter 1-26.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.313842105263158em; height: 1.12444736842105em"></img> = <img src="newChapter 1-27.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0157368421052632em; margin-right: -0.0134736842105259em; margin-top: -0.0135em; vertical-align: -0.280684210526316em; height: 1.152em"></img> (<img src="newChapter 1-28.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img>
+      is end to end delay)
+    </p>
+    <p>
+      <img src="newChapter 1-29.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 13.5064736842105em"></img>
+    </p>
+    <b><p>
+      
+    </p><p>
+      Throughput depends on bottleneck bandwidth and delay.
+    </p></b>
+    <h4 id="auto-39">3.6.1<span style="margin-left: 1em"></span>Delays in Circuit Switching <span style="margin-left: 1em"></span></h4>
+    <p>
+      When there is circuit switching , we first send a 1KB packet to ensure
+      that connections is established , so the time to establish a connection
+      is <span class="no-breaks"><img src="newChapter 1-30.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.313842105263158em; height: 1.12444736842105em"></img>+</span><img src="newChapter 1-31.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.313842105263158em; height: 1.12444736842105em"></img>
+    </p>
+    <p>
+      So in circuit switching , <img src="newChapter 1-32.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img> = <img src="newChapter 1-30.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.313842105263158em; height: 1.12444736842105em"></img>
+      + <img src="newChapter 1-33.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0156578947368421em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.313842105263158em; height: 1.12444736842105em"></img> + <img src="newChapter 1-34.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0336842105263158em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.98971052631579em"></img> (delay in
+      transmitting data). [ other proc , queue delays are ignored for now)
+    </p>
+    <p>
+      
+    </p>
+    <h4 id="auto-40">3.6.2<span style="margin-left: 1em"></span>Delays in Packet Switching <span style="margin-left: 1em"></span></h4>
+    <p>
+      <div style="display: inline">
+        If we are only considering <img src="newChapter 1-3.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img> , <img src="newChapter 1-35.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img>
+        = (<a id="auto-41"></a>
+      </div>
+      <h5>N+1)*<img src="newChapter 1-2.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img><span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        [Assuming there are N packets]<img src="newChapter 1-36.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105263em; margin-top: -0.0134736842105263em; vertical-align: -0.161078947368421em; height: 0.671315789473684em"></img>
+      </div>
+    </p>
+    <p>
+      
     </p>
   </body>
 </html>
