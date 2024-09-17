@@ -653,7 +653,92 @@
       will occur.
     </p>
     <h4 id="auto-22">3.2.1<span style="margin-left: 1em"></span>Virtual Packet Switching<span style="margin-left: 1em"></span></h4>
-    <h3 id="auto-23">3.3<span style="margin-left: 1em"></span>Circuit Switching <span style="margin-left: 1em"></span></h3>
+    <p>
+      Virtual packet switching, commonly referred to as <strong>virtual
+      circuit switching</strong>, is a hybrid between traditional packet
+      switching and circuit switching. It creates a temporary, logical path
+      (or &ldquo;virtual circuit&quot;) through a network for the duration of
+      a communication session, providing some benefits of both circuit and
+      packet switching.
+    </p>
+    <h3 id="auto-23">Key Characteristics of Virtual Circuit Switching:<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <strong>Connection-Oriented</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              Before data transmission begins, a logical path (called a
+              <strong>virtual circuit</strong>) is established between the
+              sender and receiver. This path remains in place for the entire
+              communication session.
+            </p>
+          </li>
+          <li>
+            <p>
+              The virtual circuit ensures that all packets follow the same
+              route, unlike standard packet switching where each packet can
+              take different routes.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Packet-Based</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              Even though a virtual circuit is established, data is still
+              broken down into packets, like in packet switching.
+            </p>
+          </li>
+          <li>
+            <p>
+              However, since the virtual circuit ensures a consistent route,
+              the order of the packets is maintained, and reordering is
+              usually unnecessary.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Temporary</strong>:
+        </p>
+        <ul>
+          <li>
+            The virtual circuit is not permanent. It is created only for the
+            duration of the communication session and is torn down afterward.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Efficient and Reliable</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              Virtual circuit switching combines the efficiency of packet
+              switching (sharing network resources) with the reliability of
+              circuit switching (a predefined path for the session).
+            </p>
+          </li>
+          <li>
+            <p>
+              It also provides some form of quality of service (QoS) by
+              maintaining a dedicated logical path for the data.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h3 id="auto-24"><span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-25">3.3<span style="margin-left: 1em"></span>Circuit Switching <span style="margin-left: 1em"></span></h3>
     <p>
       In <strong>circuit-switched networks</strong>, resources like
       transmission rate and buffers are reserved for the entire duration of a
@@ -671,7 +756,7 @@
       &ldquo;best effort&rdquo; basis, trying to deliver packets as quickly as
       possible without guarantees.
     </p>
-    <h4 id="auto-24">3.3.1<span style="margin-left: 1em"></span>Packet vs Circuit<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-26">3.3.1<span style="margin-left: 1em"></span>Packet vs Circuit<span style="margin-left: 1em"></span></h4>
     <p>
       <img src="newChapter 1-7.png" style="margin-left: -0.055em; margin-bottom: -0.0549999999999997em; margin-right: -0.0549999999999997em; margin-top: -0.0550000000000015em; vertical-align: -12.8553421052632em; height: 26.3263684210526em"></img>
     </p>
@@ -681,7 +766,7 @@
     <p>
       
     </p>
-    <h3 id="auto-25">3.4<span style="margin-left: 1em"></span>Delay and Losses.<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-27">3.4<span style="margin-left: 1em"></span>Delay and Losses.<span style="margin-left: 1em"></span></h3>
     <p>
       In computer networking, several types of delays affect how packets
       traverse from one router to another. Understanding these delays is
@@ -811,7 +896,7 @@
         </ul>
       </li>
     </ol>
-    <h3 id="auto-26">Comparing Transmission and Propagation Delay<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-28">Comparing Transmission and Propagation Delay<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -892,7 +977,7 @@
         </p>
       </li>
     </ul>
-    <h3 id="auto-27">3.5<span style="margin-left: 1em"></span>Communication Model:<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-29">3.5<span style="margin-left: 1em"></span>Communication Model:<span style="margin-left: 1em"></span></h3>
     <p>
       it has multiple independent layers to work on , each of them performs a
       set of defined functions 
@@ -938,7 +1023,7 @@
       </tr><tr>
         <td style="text-align: center; padding-left: 0em; padding-right: 0em"><div class="caption">
           <font style="font-size: 84.1%"><p>
-            <b>Table 1. </b><a id="auto-28"></a>Sender's end
+            <b>Table 1. </b><a id="auto-30"></a>Sender's end
           </p></font>
         </div></td>
       </tr></tbody>
@@ -975,7 +1060,7 @@
       </tr><tr>
         <td style="text-align: center; padding-left: 0em; padding-right: 0em"><div class="caption">
           <font style="font-size: 84.1%"><p>
-            <b>Table 2. </b><a id="auto-29"></a>Receiver's end
+            <b>Table 2. </b><a id="auto-31"></a>Receiver's end
           </p></font>
         </div></td>
       </tr></tbody>
@@ -983,13 +1068,13 @@
     <p>
       
     </p>
-    <h4 id="auto-30">3.5.1<span style="margin-left: 1em"></span>Application layer<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-32">3.5.1<span style="margin-left: 1em"></span>Application layer<span style="margin-left: 1em"></span></h4>
     <p>
       <span class="no-breaks"><img src="newChapter 1-21.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052632em; vertical-align: 0em; height: 0.512em"></img>Related</span> to application layer
       semantics , handles user interface , uses <b>messages </b>to
       communicate.
     </p>
-    <h4 id="auto-31">3.5.2<span style="margin-left: 1em"></span>Transport layer<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-33">3.5.2<span style="margin-left: 1em"></span>Transport layer<span style="margin-left: 1em"></span></h4>
     <p>
       <span class="no-breaks"><img src="newChapter 1-21.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052632em; vertical-align: 0em; height: 0.512em"></img>Transmits</span> messages from the
       source process to destination process using sockets , divides the
@@ -1015,7 +1100,7 @@
       transmitting data. This connection ensures both sides are ready for
       communication.TCP ensures data is delivered correctly.
     </p>
-    <h4 id="auto-32">3.5.3<span style="margin-left: 1em"></span>Network layer<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-34">3.5.3<span style="margin-left: 1em"></span>Network layer<span style="margin-left: 1em"></span></h4>
     <p>
       Packs &ldquo;segments&rdquo; into network layer
       &ldquo;<b>packets</b>&rdquo; , Delivers packets from source to
@@ -1025,14 +1110,14 @@
     <p>
       
     </p>
-    <h4 id="auto-33">3.5.4<span style="margin-left: 1em"></span>Link layer<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-35">3.5.4<span style="margin-left: 1em"></span>Link layer<span style="margin-left: 1em"></span></h4>
     <p>
       Provides communication between adjacent nodes, transferring
       <strong>frames</strong>. Link-layer protocols can vary by link (e.g.,
       Ethernet, WiFi).[ <i>Delivers frames from point to point within the same
       network, i.e. same broadcast domain (using MAC address)</i> ]
     </p>
-    <h4 id="auto-34">3.5.5<span style="margin-left: 1em"></span>Physical Layer<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-36">3.5.5<span style="margin-left: 1em"></span>Physical Layer<span style="margin-left: 1em"></span></h4>
     <p>
       Transports &ldquo;frames&rdquo; as physical layer &ldquo;bits&rdquo;
       over the physical links.
@@ -1071,10 +1156,10 @@
     <p style="margin-bottom: 1em">
       Server sends some HTML content, browser displays
     </p>
-    <h4 id="auto-35">3.5.6<span style="margin-left: 1em"></span>ARP AND RARP<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-37">3.5.6<span style="margin-left: 1em"></span>ARP AND RARP<span style="margin-left: 1em"></span></h4>
     <p>
       <div style="display: inline">
-        <a id="auto-36"></a>
+        <a id="auto-38"></a>
       </div>
       <h5>ARP(Address Resolution Protocol) : <span style="margin-left: 1em"></span></h5>
     </p>
@@ -1115,7 +1200,7 @@
     </ul>
     <p>
       <div style="display: inline">
-        <a id="auto-37"></a>
+        <a id="auto-39"></a>
       </div>
       <h5>RARP (Reverse Address Resolution Protocol):<span style="margin-left: 1em"></span></h5>
     </p>
@@ -1146,7 +1231,7 @@
     <p>
       
     </p>
-    <h3 id="auto-38">3.6<span style="margin-left: 1em"></span>Modellling of Computer Networks<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-40">3.6<span style="margin-left: 1em"></span>Modellling of Computer Networks<span style="margin-left: 1em"></span></h3>
     <p>
       <em></em>
     </p>
@@ -1172,7 +1257,7 @@
     </p><p>
       Throughput depends on bottleneck bandwidth and delay.
     </p></b>
-    <h4 id="auto-39">3.6.1<span style="margin-left: 1em"></span>Delays in Circuit Switching <span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-41">3.6.1<span style="margin-left: 1em"></span>Delays in Circuit Switching <span style="margin-left: 1em"></span></h4>
     <p>
       When there is circuit switching , we first send a 1KB packet to ensure
       that connections is established , so the time to establish a connection
@@ -1186,16 +1271,325 @@
     <p>
       
     </p>
-    <h4 id="auto-40">3.6.2<span style="margin-left: 1em"></span>Delays in Packet Switching <span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-42">3.6.2<span style="margin-left: 1em"></span>Delays in Packet Switching <span style="margin-left: 1em"></span></h4>
     <p>
       <div style="display: inline">
         If we are only considering <img src="newChapter 1-3.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img> , <img src="newChapter 1-35.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img>
-        = (<a id="auto-41"></a>
+        = (<a id="auto-43"></a>
       </div>
       <h5>N+1)*<img src="newChapter 1-2.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.0152368421052631em; vertical-align: -0.161078947368421em; height: 0.976236842105263em"></img><span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         [Assuming there are N packets]<img src="newChapter 1-36.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105263em; margin-top: -0.0134736842105263em; vertical-align: -0.161078947368421em; height: 0.671315789473684em"></img>
       </div>
+    </p>
+    <p>
+      
+    </p>
+    <p style="margin-top: 1em">
+      <strong>Question <class style="font-style: normal">1</class>. </strong>What is a TCP
+      connection , what is three way handshake connection 
+    </p>
+    <div style="margin-top: 0.5em; margin-left: 35.145870328812px">
+      <p>
+        <font style="font-size: 84.1%"><strong>Solution. </strong>A TCP connection is a
+        connection - oriented Connection before the data is transmitted , This
+        is done via Three way handshake connection .</font>
+      </p>
+    </div>
+    <div style="margin-left: 35.145870328812px">
+      <p>
+        <font style="font-size: 84.1%">converse to udp connection , tcp tries to rectify it's
+        error ( for example resending data , if no ack was found)</font>
+      </p>
+    </div>
+    <div style="margin-left: 35.145870328812px">
+      <p>
+        <font style="font-size: 84.1%">It guarantees Connection order , while udp
+        doesn't.</font>
+      </p>
+    </div>
+    <div style="margin-left: 35.145870328812px">
+      <p>
+        <font style="font-size: 84.1%"><a id="auto-44"></a><h6><h3 id="auto-53"><a id="auto-56"></a><h5>Steps in the
+        Three-Way Handshake:<span style="margin-left: 1em"></span></h5><span style="margin-left: 1em"></span></h3><span
+        style="margin-left: 1em"></span></h6></font>
+      </p>
+    </div>
+    <div style="margin-bottom: 1em; margin-left: 35.145870328812px">
+      <font style="font-size: 84.1%"><ol>
+        <li>
+          <p>
+            <strong>SYN (Synchronize)</strong>:
+          </p>
+          <ul>
+            <li>
+              <p>
+                The client sends a TCP segment with the SYN flag set to the
+                server. This is the initial request to establish a connection.
+              </p>
+            </li>
+            <li>
+              <p>
+                It includes an initial sequence number (let's say
+                <code>x</code>), which will be used to track data sent by the
+                client.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            <strong>SYN-ACK (Synchronize-Acknowledge)</strong>:
+          </p>
+          <ul>
+            <li>
+              <p>
+                The server receives the SYN request from the client and
+                responds with a TCP segment that has both the SYN and ACK
+                flags set.
+              </p>
+            </li>
+            <li>
+              <p>
+                The ACK acknowledges the client's SYN request (acknowledging
+                <code>x+1</code>).
+              </p>
+            </li>
+            <li>
+              <p>
+                The SYN part of this message includes the server's initial
+                sequence number (let's say <code>y</code>), which will be used
+                to track data sent by the server.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            <strong>ACK (Acknowledge)</strong>:
+          </p>
+          <ul>
+            <li>
+              <p>
+                The client receives the SYN-ACK from the server and sends an
+                ACK back, acknowledging the server's sequence number
+                (acknowledging <code>y+1</code>).
+              </p>
+            </li>
+            <li>
+              <p>
+                Now, the connection is fully established, and data
+                transmission can begin.
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ol></font>
+    </div>
+    <p>
+      
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>Question <class style="font-style: normal">2</class>. </strong>Since udp connection
+      is an unreliable way to tranfer pacekts and so in packet swithching , Is
+      packet switching a udp connection ?
+    </p>
+    <div style="margin-top: 0.5em; margin-left: 35.145870328812px">
+      <p>
+        <font style="font-size: 84.1%"><strong>Solution. </strong>Packet switching is a method
+        of data transmission, but it is not specifically tied to either UDP
+        (User Datagram Protocol) or TCP (Transmission Control Protocol). Both
+        <strong>UDP</strong> and <strong>TCP</strong> use packet switching,
+        but in different ways.</font>
+      </p>
+    </div>
+    <div style="margin-left: 35.145870328812px">
+      <font style="font-size: 84.1%"><h3 id="auto-57">What is Packet Switching?<span style="margin-left: 1em"></span></h3></font>
+    </div>
+    <div style="margin-left: 35.145870328812px">
+      <font style="font-size: 84.1%"><ul>
+        <li>
+          <p>
+            Packet switching involves breaking down data into small packets
+            and sending them independently over a network. Each packet may
+            take a different path to reach the destination, and at the
+            destination, the packets are reassembled into the original
+            message.
+          </p>
+        </li>
+        <li>
+          <p>
+            This approach maximizes network efficiency by allowing multiple
+            communications to share the same network paths.
+          </p>
+        </li>
+      </ul></font>
+    </div>
+    <div style="margin-left: 35.145870328812px">
+      <font style="font-size: 84.1%"><h3 id="auto-58">How UDP and TCP Use Packet Switching:<span style="margin-left: 1em"></span></h3></font>
+    </div>
+    <div style="margin-bottom: 0.5em; margin-left: 35.145870328812px">
+      <font style="font-size: 84.1%"><ul>
+        <li>
+          <p>
+            <strong>UDP (User Datagram Protocol)</strong>:
+          </p>
+          <ul>
+            <li>
+              <p>
+                UDP uses packet switching without establishing a connection
+                first. Each packet is sent independently, without error
+                checking or retransmission if a packet is lost.
+              </p>
+            </li>
+            <li>
+              <p>
+                Since there's no need to maintain a connection, UDP is faster
+                but less reliable. It doesn't ensure that packets arrive in
+                order or even at all.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Example</strong>: Live streaming or online gaming,
+                where speed is prioritized over reliability, often uses UDP.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            <strong>TCP (Transmission Control Protocol)</strong>:
+          </p>
+          <ul>
+            <li>
+              <p>
+                TCP also uses packet switching, but it adds reliability.
+                Before transmitting, TCP establishes a connection (using the
+                three-way handshake), ensures that packets arrive in order,
+                checks for errors, and resends lost packets.
+              </p>
+            </li>
+            <li>
+              <p>
+                This connection-oriented nature makes TCP slower but highly
+                reliable.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Example</strong>: File transfers or web browsing,
+                where data accuracy and completeness are critical, typically
+                use TCP.
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul></font>
+    </div>
+    <p>
+      
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>Remark <class style="font-style: normal">3</class>. </strong><b>If there's packet
+      switching , N packets And k links<span style="margin-left: 1em"></span>assume dprop
+      &lt;&lt; d trans || Ete : k( d prop) + (N+1) dtrans.</b>
+    </p>
+    <p style="margin-top: 1em">
+      <strong>Question <class style="font-style: normal">3</class>. </strong>since we know packets
+      are used in a udp connection , is it used in tcp also ?
+    </p>
+    <div style="margin-top: 0.5em; margin-left: 35.145870328812px">
+      <font style="font-size: 84.1%"><strong>Solution. </strong><a id="auto-59"></a><h3>Circuit Switching
+      vs. Packet Switching:<span style="margin-left: 1em"></span></h3></font>
+    </div>
+    <div style="margin-bottom: 1em; margin-left: 35.145870328812px">
+      <font style="font-size: 84.1%"><ul>
+        <li>
+          <p>
+            <strong>Circuit Switching</strong>:
+          </p>
+          <ul>
+            <li>
+              <p>
+                Establishes a continuous connection.
+              </p>
+            </li>
+            <li>
+              <p>
+                Used traditionally in voice communication, like
+                <strong>telephone calls</strong>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Data is not divided into packets; instead, it is sent as a
+                continuous stream.
+              </p>
+            </li>
+            <li>
+              <p>
+                Ideal for real-time communication since the path guarantees
+                consistent, uninterrupted data flow.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            <strong>Packet Switching</strong>:
+          </p>
+          <ul>
+            <li>
+              <p>
+                Breaks data into small packets, each transmitted independently
+                and possibly taking different routes.
+              </p>
+            </li>
+            <li>
+              <p>
+                Used in <strong>computer networks</strong>, like the internet,
+                where resource efficiency is more important than a guaranteed
+                path.
+              </p>
+            </li>
+            <li>
+              <p>
+                Data may experience slight delays or arrive out of order but
+                is reassembled at the destination.
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul></font>
+    </div>
+    <p>
+      
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>Question <class style="font-style: normal">4</class>. </strong>If TCP connection is
+      reliable , is it possible that we don't suffer a packet loss?
+    </p>
+    <div style="margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 35.145870328812px">
+      <p>
+        <font style="font-size: 84.1%"><strong>Solution. </strong>No, even though TCP is
+        reliable, packet loss can still occur due to network issues like
+        congestion, faulty hardware, or interference. TCP mitigates this by
+        detecting losses and retransmitting packets, ensuring data integrity
+        despite potential losses.</font>
+      </p>
+    </div>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
     </p>
     <p>
       
