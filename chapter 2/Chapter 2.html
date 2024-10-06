@@ -439,36 +439,19 @@
         </p>
       </li>
     </ul>
-    <h3 id="auto-25">Why is there a need to cache or cookies ?<span style="margin-left: 1em"></span></h3>
     <p>
-      take an example where client asks to lock the data record X , 
-    </p>
-    <p>
-      changes X to <img src="Chapter 2-2.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105263em; margin-top: -0.0142368421052631em; vertical-align: -0.161078947368421em; height: 0.956026315789474em"></img>
-    </p>
-    <p>
-      changes <img src="Chapter 2-3.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105267em; margin-top: -0.0142368421052631em; vertical-align: -0.161078947368421em; height: 0.956026315789474em"></img> at time <span class="no-breaks"><img src="Chapter 2-4.png" style="margin-left: 0.0645em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.011421052631579em; vertical-align: 0em; height: 0.988763157894737em"></img>.</span>
-    </p>
-    <p>
-      then unlocks the record at storing <img src="Chapter 2-5.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105263em; margin-top: -0.0142368421052631em; vertical-align: -0.161078947368421em; height: 0.956026315789474em"></img> in X.
-    </p>
-    <p>
-      What if the system Crashes at <span class="no-breaks"><img src="Chapter 2-6.png" style="margin-left: 0.0645em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.011421052631579em; vertical-align: 0em; height: 0.988763157894737em"></img>Since</span>
-      HTTP is stateless , we wont know what was the previous transaction ?
+      
     </p>
     <p>
       
     </p>
     <p>
-      Your example conveys a valid point but can be refined a bit to better
-      emphasize why <strong>cookies</strong> and <strong>cache</strong> are
-      needed, especially in the context of HTTP's statelessness. Here's a
-      breakdown of the issues and suggestions for improvement:
+      
     </p>
     <p>
-      <hr></hr>
+      
     </p>
-    <h3 id="auto-26">Revised Explanation:<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-25">Why is there a need to cache or cookies ?<span style="margin-left: 1em"></span></h3>
     <p>
       Since <strong>HTTP is stateless</strong>, the server doesn't retain
       information between requests, which means that each new request is
@@ -528,7 +511,7 @@
         </p>
       </li>
     </ul>
-    <h2 id="auto-27">6<span style="margin-left: 1em"></span>Maintaining user server/state using
+    <h2 id="auto-26">6<span style="margin-left: 1em"></span>Maintaining user server/state using
     COOKIES<span style="margin-left: 1em"></span></h2>
     <p>
       Here's a brief explanation of the four components involved in how
@@ -611,7 +594,7 @@
         </ul>
       </li>
     </ol>
-    <h3 id="auto-28">How They Work Together:<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-27">How They Work Together:<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -642,8 +625,8 @@
       This mechanism allows the server to &ldquo;remember&rdquo; the user
       across different requests in an otherwise stateless protocol like HTTP.
     </p>
-    <h2 id="auto-29">7<span style="margin-left: 1em"></span>What is Web Cache ? <span style="margin-left: 1em"></span></h2>
-    <h3 id="auto-30">Web Cache Functionality<span style="margin-left: 1em"></span></h3>
+    <h2 id="auto-28">7<span style="margin-left: 1em"></span>What is Web Cache ? <span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-29">Web Cache Functionality<span style="margin-left: 1em"></span></h3>
     <ol>
       <ul>
         <li>
@@ -756,7 +739,7 @@
         </ul>
       </li>
     </ul>
-    <h3 id="auto-31">Working of FTP<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-30">Working of FTP<span style="margin-left: 1em"></span></h3>
     <ol>
       <li>
         <p>
@@ -822,94 +805,21 @@
         </ul>
       </li>
     </ol>
-    <h3 id="auto-32">Sample Commands<span style="margin-left: 1em"></span></h3>
-    <p>
-      FTP commands are sent as ASCII text over the control connection. Here
-      are some common commands:
-    </p>
-    <ul>
-      <li>
-        <p>
-          <strong>USER username</strong>: Initiates user login.
-        </p>
-      </li>
-      <li>
-        <p>
-          <strong>PASS password</strong>: Provides the password for the user.
-        </p>
-      </li>
-      <li>
-        <p>
-          <strong>LIST</strong>: Retrieves and returns a list of files in the
-          current directory.
-        </p>
-      </li>
-      <li>
-        <p>
-          <strong>RETR filename</strong>: Downloads (retrieves) the specified
-          file from the server.
-        </p>
-      </li>
-      <li>
-        <p>
-          <strong>STOR filename</strong>: Uploads (stores) the specified file
-          onto the remote server.
-        </p>
-      </li>
-    </ul>
-    <h3 id="auto-33">Sample Return Codes<span style="margin-left: 1em"></span></h3>
-    <p>
-      FTP responses are accompanied by status codes, which provide information
-      about the success or failure of the commands. Some common return codes
-      include:
-    </p>
-    <ul>
-      <li>
-        <p>
-          <strong>331</strong>: Username OK, password required.
-        </p>
-      </li>
-      <li>
-        <p>
-          <strong>125</strong>: Data connection already open; transfer
-          starting.
-        </p>
-      </li>
-      <li>
-        <p>
-          <strong>425</strong>: Can't open data connection (e.g., due to
-          firewall issues).
-        </p>
-      </li>
-      <li>
-        <p>
-          <strong>452</strong>: Error writing file (e.g., insufficient disk
-          space on the server).
-        </p>
-      </li>
-    </ul>
     <p>
       
     </p>
     <p>
       FTP is a widely used protocol for file transfer, providing essential
-      functions for client-server communication. Its design separates the
-      control and data connections, ensuring efficient and reliable file
-      transfers. Despite its utility, security concerns led to the development
-      of secure alternatives like FTPS (FTP Secure) and SFTP (SSH File
-      Transfer Protocol).
+      functions for client-server communication.
     </p>
+    <h2 id="auto-31">8<span style="margin-left: 1em"></span>Emails <span style="margin-left: 1em"></span></h2>
     <p>
-      
-    </p>
-    <h2 id="auto-34">8<span style="margin-left: 1em"></span>Emails <span style="margin-left: 1em"></span></h2>
-    <p>
-      Three components <img src="Chapter 2-7.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0157368421052632em; margin-right: -0.0134736842105312em; margin-top: -0.0135em; vertical-align: -0.280684210526316em; height: 1.152em"></img>
+      Three components <img src="Chapter 2-2.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0157368421052632em; margin-right: -0.0134736842105312em; margin-top: -0.0135em; vertical-align: -0.280684210526316em; height: 1.152em"></img>
     </p>
     <p>
       Two components of Mail servers : Mail box , Message queue 
     </p>
-    <h3 id="auto-35">SMTP Characteristics<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-32">SMTP Characteristics<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -924,7 +834,7 @@
         </p>
       </li>
     </ul>
-    <h3 id="auto-36">SMTP Commands Example<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-33">SMTP Commands Example<span style="margin-left: 1em"></span></h3>
     <p>
       The following is an example of a dialogue between an SMTP client and
       server:
@@ -986,7 +896,7 @@
         </ul>
       </li>
     </ol>
-    <h3 id="auto-37">Comparison of SMTP and HTTP<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-34">Comparison of SMTP and HTTP<span style="margin-left: 1em"></span></h3>
     <p>
       Both SMTP  and HTTP are protocols for transferring files between hosts.
       They differ significantly in their operation and purpose:
@@ -1025,7 +935,7 @@
           <li>
             <p>
               <strong>SMTP</strong>: Requires that all messages be in 7-bit
-              ASCII format. 
+              ASCII format.
             </p>
           </li>
         </ul>
@@ -1050,7 +960,7 @@
         </ul>
       </li>
     </ol>
-    <h3 id="auto-38">Mail Message Formats<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-35">Mail Message Formats<span style="margin-left: 1em"></span></h3>
     <p>
       When sending an email, it includes a header with peripheral information,
       similar to a traditional letter. The header follows the format defined
@@ -1059,13 +969,13 @@
       <code>Subject:</code>. A blank line separates the header from the body
       of the email.
     </p>
-    <h3 id="auto-39">Mail Access Protocols<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-36">Mail Access Protocols<span style="margin-left: 1em"></span></h3>
     <p>
       Once an email is sent via SMTP, it is stored in the recipient's mailbox
       on their mail server. Users typically access their email through a mail
       client on their local system rather than directly on the server.
     </p>
-    <h4 id="auto-40">Email Delivery Path:<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-37">Email Delivery Path:<span style="margin-left: 1em"></span></h4>
     <ol>
       <li>
         <p>
@@ -1086,7 +996,7 @@
         </p>
       </li>
     </ol>
-    <h3 id="auto-41">POP3 (Post Office Protocol Version 3)<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-38">POP3 (Post Office Protocol Version 3)<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -1121,7 +1031,7 @@
         </ul>
       </li>
     </ul>
-    <h4 id="auto-42">Example POP3 Commands:<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-39">Example POP3 Commands:<span style="margin-left: 1em"></span></h4>
     <ol>
       <li>
         <p>
@@ -1156,7 +1066,7 @@
         </p>
       </li>
     </ol>
-    <h3 id="auto-43">Limitations of POP3<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-40">Limitations of POP3<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -1173,7 +1083,7 @@
         </p>
       </li>
     </ul>
-    <h3 id="auto-44">IMAP (Internet Mail Access Protocol)<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-41">IMAP (Internet Mail Access Protocol)<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -1204,12 +1114,12 @@
       effectively.
     </p>
     <p>
-      <img src="Chapter 2-8.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 25.8656052631579em"></img>
+      <img src="Chapter 2-3.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 25.8656052631579em"></img>
     </p>
     <p>
-      <img src="Chapter 2-9.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 18.9982368421053em"></img>
+      <img src="Chapter 2-4.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 18.9982368421053em"></img>
     </p>
-    <h2 id="auto-45">9<span style="margin-left: 1em"></span>Domain Name System <span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-42">9<span style="margin-left: 1em"></span>Domain Name System <span style="margin-left: 1em"></span></h2>
     <p>
       DNS primarily operates over the <strong>User Datagram Protocol
       (UDP)</strong>, which allows for low-latency queries. However, it can
@@ -1260,7 +1170,7 @@
       domain name being queried. For example, the <code>.in</code> TLD server
       will know where to find DNS records for <code>iiitd.ac.in</code>.
     </p>
-    <h3 id="auto-46">9.1<span style="margin-left: 1em"></span>DNS LEVELS:<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-43">9.1<span style="margin-left: 1em"></span>DNS LEVELS:<span style="margin-left: 1em"></span></h3>
     <ol>
       <li>
         <p>
@@ -1342,9 +1252,9 @@
     <p>
       Caching is done at local DNS as well.
     </p>
-    <h3 id="auto-47">Example: Host at <code>engineering.nyu.edu</code> wants the IP
+    <h3 id="auto-44">Example: Host at <code>engineering.nyu.edu</code> wants the IP
     address for <code>gaia.cs.umass.edu</code><span style="margin-left: 1em"></span></h3>
-    <h4 id="auto-48"><strong>Iterated Query:</strong><span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-45"><strong>Iterated Query:</strong><span style="margin-left: 1em"></span></h4>
     <p>
       In an <strong>iterated query</strong>, the DNS client (at
       <code>engineering.nyu.edu</code>) asks its local DNS resolver for the IP
@@ -1383,7 +1293,7 @@
       At each step, the queried server replies with the next server to ask,
       and the client does all the querying.
     </p>
-    <h4 id="auto-49"><strong>Recursive Query:</strong><span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-46"><strong>Recursive Query:</strong><span style="margin-left: 1em"></span></h4>
     <p>
       In a <strong>recursive query</strong>, the DNS client (at
       <code>engineering.nyu.edu</code>) asks its <strong>local DNS
@@ -1441,12 +1351,12 @@
       
     </p>
     <p>
-      <img src="Chapter 2-10.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 16.718052631579em"></img>
+      <img src="Chapter 2-5.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 16.718052631579em"></img>
     </p>
     <p>
       
     </p>
-    <h3 id="auto-50">9.2<span style="margin-left: 1em"></span>DNS Records<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-47">9.2<span style="margin-left: 1em"></span>DNS Records<span style="margin-left: 1em"></span></h3>
     <p>
       <strong>DNS</strong> is a distributed database that stores resource
       records (RR), which map domain names to different types of data.
@@ -1457,7 +1367,7 @@
       <code>ttl</code> (time-to-live, which indicates how long the information
       is valid).
     </p>
-    <h4 id="auto-51">9.2.1<span style="margin-left: 1em"></span>Types of DNS records<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-48">9.2.1<span style="margin-left: 1em"></span>Types of DNS records<span style="margin-left: 1em"></span></h4>
     <p>
       Type = A: name is the hostname , value is the IP Address corresponding
       to the hostname.
@@ -1475,7 +1385,7 @@
       Type = MX (Mail Exchange ) : Value is the hostname of SMTP server
       associated with the domain
     </p>
-    <h3 id="auto-52">9.3<span style="margin-left: 1em"></span>DMS Protocol Messages <span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-49">9.3<span style="margin-left: 1em"></span>DMS Protocol Messages <span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -1556,7 +1466,7 @@
         </p>
       </li>
     </ul>
-    <h3 id="auto-53">9.4<span style="margin-left: 1em"></span>Getting Info in DNS server <span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-50">9.4<span style="margin-left: 1em"></span>Getting Info in DNS server <span style="margin-left: 1em"></span></h3>
     <p>
       <strong>Registering the domain name:</strong>
     </p>

@@ -261,29 +261,15 @@
     <strong|DELETE> methods in addition to those from HTTP/1.0.
   </itemize>
 
-  <subsection*|Why is there a need to cache or cookies ?>
-
-  take an example where client asks to lock the data record X ,\ 
-
-  changes X to <math|X<rsub|1>>
-
-  changes <math|X<rsub|1> to X<rsub|2>> at time <math|<wide|t|~>>.
-
-  then unlocks the record at storing <math|X<rsub|2 >> in X.
-
-  What if the system Crashes at <math|<wide|t|~> ? >Since HTTP is stateless ,
-  we wont know what was the previous transaction ?
+  \;
 
   \;
 
-  Your example conveys a valid point but can be refined a bit to better
-  emphasize why <strong|cookies> and <strong|cache> are needed, especially in
-  the context of HTTP's statelessness. Here's a breakdown of the issues and
-  suggestions for improvement:
+  \;
 
-  <hrule>
+  \;
 
-  <subsection*|Revised Explanation:>
+  <subsection*|Why is there a need to cache or cookies ?>
 
   Since <strong|HTTP is stateless>, the server doesn't retain information
   between requests, which means that each new request is treated
@@ -511,53 +497,10 @@
     done.>
   </enumerate>
 
-  <subsection*|Sample Commands>
-
-  FTP commands are sent as ASCII text over the control connection. Here are
-  some common commands:
-
-  <\itemize>
-    <item><strong|USER username>: Initiates user login.
-
-    <item><strong|PASS password>: Provides the password for the user.
-
-    <item><strong|LIST>: Retrieves and returns a list of files in the current
-    directory.
-
-    <item><strong|RETR filename>: Downloads (retrieves) the specified file
-    from the server.
-
-    <item><strong|STOR filename>: Uploads (stores) the specified file onto
-    the remote server.
-  </itemize>
-
-  <subsection*|Sample Return Codes>
-
-  FTP responses are accompanied by status codes, which provide information
-  about the success or failure of the commands. Some common return codes
-  include:
-
-  <\itemize>
-    <item><strong|331>: Username OK, password required.
-
-    <item><strong|125>: Data connection already open; transfer starting.
-
-    <item><strong|425>: Can't open data connection (e.g., due to firewall
-    issues).
-
-    <item><strong|452>: Error writing file (e.g., insufficient disk space on
-    the server).
-  </itemize>
-
   \;
 
   FTP is a widely used protocol for file transfer, providing essential
-  functions for client-server communication. Its design separates the control
-  and data connections, ensuring efficient and reliable file transfers.
-  Despite its utility, security concerns led to the development of secure
-  alternatives like FTPS (FTP Secure) and SFTP (SSH File Transfer Protocol).
-
-  \;
+  functions for client-server communication.
 
   <section|Emails >
 
@@ -630,7 +573,7 @@
       restriction.[no encoding]
 
       <item><strong|SMTP>: Requires that all messages be in 7-bit ASCII
-      format.\ 
+      format.
     </itemize>
 
     <item><strong|Handling of Documents>:
@@ -1026,9 +969,9 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|3.4|2>>
     <associate|auto-11|<tuple|4|2>>
-    <associate|auto-12|<tuple|1|2>>
-    <associate|auto-13|<tuple|5|2>>
-    <associate|auto-14|<tuple|5.1|2>>
+    <associate|auto-12|<tuple|1|3>>
+    <associate|auto-13|<tuple|5|3>>
+    <associate|auto-14|<tuple|5.1|3>>
     <associate|auto-15|<tuple|5.2|3>>
     <associate|auto-16|<tuple|5.3|3>>
     <associate|auto-17|<tuple|5.3.1|3>>
@@ -1036,42 +979,39 @@
     <associate|auto-19|<tuple|5.3.3|3>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-20|<tuple|5.4|3>>
-    <associate|auto-21|<tuple|5.5|3>>
+    <associate|auto-21|<tuple|5.5|4>>
     <associate|auto-22|<tuple|5.6|4>>
     <associate|auto-23|<tuple|<with|mode|<quote|math>|\<bullet\>>|4>>
     <associate|auto-24|<tuple|<with|mode|<quote|math>|\<bullet\>>|4>>
-    <associate|auto-25|<tuple|<with|mode|<quote|math>|\<bullet\>>|4>>
-    <associate|auto-26|<tuple|<with|mode|<quote|math>|\<bullet\>>|5>>
-    <associate|auto-27|<tuple|6|5>>
-    <associate|auto-28|<tuple|<with|mode|<quote|math>|\<bullet\>>|6>>
+    <associate|auto-25|<tuple|<with|mode|<quote|math>|\<bullet\>>|5>>
+    <associate|auto-26|<tuple|6|5>>
+    <associate|auto-27|<tuple|<with|mode|<quote|math>|\<bullet\>>|6>>
+    <associate|auto-28|<tuple|7|6>>
     <associate|auto-29|<tuple|7|6>>
     <associate|auto-3|<tuple|1.2|1>>
-    <associate|auto-30|<tuple|7|6>>
-    <associate|auto-31|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|7>>
-    <associate|auto-32|<tuple|<with|mode|<quote|math>|\<bullet\>>|7>>
+    <associate|auto-30|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|7>>
+    <associate|auto-31|<tuple|8|7>>
+    <associate|auto-32|<tuple|8|8>>
     <associate|auto-33|<tuple|<with|mode|<quote|math>|\<bullet\>>|8>>
-    <associate|auto-34|<tuple|8|8>>
-    <associate|auto-35|<tuple|8|8>>
-    <associate|auto-36|<tuple|<with|mode|<quote|math>|\<bullet\>>|8>>
+    <associate|auto-34|<tuple|<with|mode|<quote|math>|\<bullet\>>|8>>
+    <associate|auto-35|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
+    <associate|auto-36|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
     <associate|auto-37|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
-    <associate|auto-38|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
-    <associate|auto-39|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
+    <associate|auto-38|<tuple|3|9>>
+    <associate|auto-39|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|9>>
     <associate|auto-4|<tuple|2|1>>
-    <associate|auto-40|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
-    <associate|auto-41|<tuple|3|9>>
-    <associate|auto-42|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|10>>
-    <associate|auto-43|<tuple|6|10>>
-    <associate|auto-44|<tuple|<with|mode|<quote|math>|\<bullet\>>|10>>
-    <associate|auto-45|<tuple|9|11>>
-    <associate|auto-46|<tuple|9.1|11>>
-    <associate|auto-47|<tuple|<with|mode|<quote|math>|\<bullet\>>|12>>
-    <associate|auto-48|<tuple|<with|mode|<quote|math>|\<bullet\>>|12>>
-    <associate|auto-49|<tuple|4|12>>
-    <associate|auto-5|<tuple|2.1|1>>
-    <associate|auto-50|<tuple|9.2|13>>
-    <associate|auto-51|<tuple|9.2.1|13>>
-    <associate|auto-52|<tuple|9.3|13>>
-    <associate|auto-53|<tuple|9.4|14>>
+    <associate|auto-40|<tuple|6|9>>
+    <associate|auto-41|<tuple|<with|mode|<quote|math>|\<bullet\>>|10>>
+    <associate|auto-42|<tuple|9|10>>
+    <associate|auto-43|<tuple|9.1|11>>
+    <associate|auto-44|<tuple|<with|mode|<quote|math>|\<bullet\>>|12>>
+    <associate|auto-45|<tuple|<with|mode|<quote|math>|\<bullet\>>|12>>
+    <associate|auto-46|<tuple|4|12>>
+    <associate|auto-47|<tuple|9.2|13>>
+    <associate|auto-48|<tuple|9.2.1|13>>
+    <associate|auto-49|<tuple|9.3|13>>
+    <associate|auto-5|<tuple|2.1|2>>
+    <associate|auto-50|<tuple|9.4|14>>
     <associate|auto-6|<tuple|3|2>>
     <associate|auto-7|<tuple|3.1|2>>
     <associate|auto-8|<tuple|3.2|2>>
@@ -1183,119 +1123,107 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-25>>
 
-      <with|par-left|<quote|1tab>|Revised Explanation:
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Maintaining
       user server/state using COOKIES> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27><vspace|0.5fn>
+      <no-break><pageref|auto-26><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|How They Work Together:
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>>
+      <no-break><pageref|auto-27>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>What
       is Web Cache ? > <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29><vspace|0.5fn>
+      <no-break><pageref|auto-28><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|Web Cache Functionality
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>>
+      <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|1tab>|Working of FTP
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>>
-
-      <with|par-left|<quote|1tab>|Sample Commands
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
-
-      <with|par-left|<quote|1tab>|Sample Return Codes
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
+      <no-break><pageref|auto-30>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>Emails
       > <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34><vspace|0.5fn>
+      <no-break><pageref|auto-31><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|SMTP Characteristics
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
+      <no-break><pageref|auto-32>>
 
       <with|par-left|<quote|1tab>|SMTP Commands Example
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>>
+      <no-break><pageref|auto-33>>
 
       <with|par-left|<quote|1tab>|Comparison of SMTP and HTTP
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
+      <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|1tab>|Mail Message Formats
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>>
+      <no-break><pageref|auto-35>>
 
       <with|par-left|<quote|1tab>|Mail Access Protocols
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
+      <no-break><pageref|auto-36>>
 
       <with|par-left|<quote|2tab>|Email Delivery Path:
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>>
+      <no-break><pageref|auto-37>>
 
       <with|par-left|<quote|1tab>|POP3 (Post Office Protocol Version 3)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>>
+      <no-break><pageref|auto-38>>
 
       <with|par-left|<quote|2tab>|Example POP3 Commands:
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <no-break><pageref|auto-39>>
 
       <with|par-left|<quote|1tab>|Limitations of POP3
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>>
+      <no-break><pageref|auto-40>>
 
       <with|par-left|<quote|1tab>|IMAP (Internet Mail Access Protocol)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>>
+      <no-break><pageref|auto-41>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>Domain
       Name System > <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45><vspace|0.5fn>
+      <no-break><pageref|auto-42><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|9.1<space|2spc>DNS LEVELS:
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>>
+      <no-break><pageref|auto-43>>
 
       <with|par-left|<quote|1tab>|Example: Host at
       <with|font-family|<quote|tt>|engineering.nyu.edu> wants the IP address
       for <with|font-family|<quote|tt>|gaia.cs.umass.edu>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>>
+      <no-break><pageref|auto-44>>
 
       <with|par-left|<quote|2tab>|<with|font-series|<quote|bold>|math-font-series|<quote|bold>|Iterated
       Query:> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
+      <no-break><pageref|auto-45>>
 
       <with|par-left|<quote|2tab>|<with|font-series|<quote|bold>|math-font-series|<quote|bold>|Recursive
       Query:> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>>
+      <no-break><pageref|auto-46>>
 
       <with|par-left|<quote|1tab>|9.2<space|2spc>DNS Records
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>>
+      <no-break><pageref|auto-47>>
 
       <with|par-left|<quote|2tab>|9.2.1<space|2spc>Types of DNS records
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>>
+      <no-break><pageref|auto-48>>
 
       <with|par-left|<quote|1tab>|9.3<space|2spc>DMS Protocol Messages
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
+      <no-break><pageref|auto-49>>
 
       <with|par-left|<quote|1tab>|9.4<space|2spc>Getting Info in DNS server
       \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-50>>
     </associate>
   </collection>
 </auxiliary>
