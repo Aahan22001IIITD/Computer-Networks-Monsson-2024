@@ -519,38 +519,6 @@
     message in a queue and retries delivery later.
   </itemize>
 
-  <subsection*|SMTP Commands Example>
-
-  The following is an example of a dialogue between an SMTP client and
-  server:
-
-  <\enumerate>
-    <item><strong|Connection Establishment>:<next-line><code*|S: 220
-    hamburger.edu> (Greeting from the server)
-
-    <item><strong|Client Commands>:
-
-    <\itemize>
-      <item><code*|C: HELO crepes.fr> (Client introduces itself)
-
-      <item><code*|C: MAIL FROM: \<less\>alice@crepes.fr\<gtr\>> (Specifying
-      sender)
-
-      <item><code*|C: RCPT TO: \<less\>bob@hamburger.edu\<gtr\>> (Specifying
-      recipient)
-
-      <item><code*|C: DATA> (Indicating the beginning of the message)
-
-      <item><code*|C: Do you like ketchup?> (Message content)
-
-      <item><code*|C: How about pickles?>
-
-      <item><code*|C: .> (Indicating the end of the message)
-
-      <item><code*|C: QUIT> (Ending the session)
-    </itemize>
-  </enumerate>
-
   <subsection*|Comparison of SMTP and HTTP>
 
   Both SMTP \ and HTTP are protocols for transferring files between hosts.
@@ -563,7 +531,7 @@
       <item><strong|HTTP>: Primarily a pull protocol. Users request files
       from a web server, initiating a TCP connection to receive the files.
 
-      <item><strong|SMTP>: Both push and pull
+      <item><strong|SMTP>: Primarily a push protocol.
     </itemize>
 
     <item><strong|Data Format>:
@@ -586,14 +554,6 @@
       message.
     </itemize>
   </enumerate>
-
-  <subsection*|Mail Message Formats>
-
-  When sending an email, it includes a header with peripheral information,
-  similar to a traditional letter. The header follows the format defined in
-  RFC 5322, which includes required lines such as <code*|From:> and
-  <code*|To:>, and can also include optional lines like <code*|Subject:>. A
-  blank line separates the header from the body of the email.
 
   <subsection*|Mail Access Protocols>
 
@@ -995,21 +955,21 @@
     <associate|auto-33|<tuple|<with|mode|<quote|math>|\<bullet\>>|8>>
     <associate|auto-34|<tuple|<with|mode|<quote|math>|\<bullet\>>|8>>
     <associate|auto-35|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
-    <associate|auto-36|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
-    <associate|auto-37|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
-    <associate|auto-38|<tuple|3|9>>
-    <associate|auto-39|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|9>>
+    <associate|auto-36|<tuple|3|9>>
+    <associate|auto-37|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|9>>
+    <associate|auto-38|<tuple|6|9>>
+    <associate|auto-39|<tuple|<with|mode|<quote|math>|\<bullet\>>|9>>
     <associate|auto-4|<tuple|2|1>>
-    <associate|auto-40|<tuple|6|9>>
-    <associate|auto-41|<tuple|<with|mode|<quote|math>|\<bullet\>>|10>>
-    <associate|auto-42|<tuple|9|10>>
-    <associate|auto-43|<tuple|9.1|11>>
-    <associate|auto-44|<tuple|<with|mode|<quote|math>|\<bullet\>>|12>>
-    <associate|auto-45|<tuple|<with|mode|<quote|math>|\<bullet\>>|12>>
-    <associate|auto-46|<tuple|4|12>>
-    <associate|auto-47|<tuple|9.2|13>>
-    <associate|auto-48|<tuple|9.2.1|13>>
-    <associate|auto-49|<tuple|9.3|13>>
+    <associate|auto-40|<tuple|9|9>>
+    <associate|auto-41|<tuple|9.1|10>>
+    <associate|auto-42|<tuple|<with|mode|<quote|math>|\<bullet\>>|10>>
+    <associate|auto-43|<tuple|<with|mode|<quote|math>|\<bullet\>>|11>>
+    <associate|auto-44|<tuple|4|12>>
+    <associate|auto-45|<tuple|9.2|12>>
+    <associate|auto-46|<tuple|9.2.1|12>>
+    <associate|auto-47|<tuple|9.3|13>>
+    <associate|auto-48|<tuple|9.4|13>>
+    <associate|auto-49|<tuple|9.4|13>>
     <associate|auto-5|<tuple|2.1|2>>
     <associate|auto-50|<tuple|9.4|14>>
     <associate|auto-6|<tuple|3|2>>

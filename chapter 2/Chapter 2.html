@@ -834,69 +834,7 @@
         </p>
       </li>
     </ul>
-    <h3 id="auto-33">SMTP Commands Example<span style="margin-left: 1em"></span></h3>
-    <p>
-      The following is an example of a dialogue between an SMTP client and
-      server:
-    </p>
-    <ol>
-      <li>
-        <p>
-          <strong>Connection Establishment</strong>:<br /><code>S: 220
-          hamburger.edu</code> (Greeting from the server)
-        </p>
-      </li>
-      <li>
-        <p>
-          <strong>Client Commands</strong>:
-        </p>
-        <ul>
-          <li>
-            <p>
-              <code>C: HELO crepes.fr</code> (Client introduces itself)
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>C: MAIL FROM: &lt;alice@crepes.fr&gt;</code> (Specifying
-              sender)
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>C: RCPT TO: &lt;bob@hamburger.edu&gt;</code> (Specifying
-              recipient)
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>C: DATA</code> (Indicating the beginning of the message)
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>C: Do you like ketchup?</code> (Message content)
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>C: How about pickles?</code>
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>C: .</code> (Indicating the end of the message)
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>C: QUIT</code> (Ending the session)
-            </p>
-          </li>
-        </ul>
-      </li>
-    </ol>
-    <h3 id="auto-34">Comparison of SMTP and HTTP<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-33">Comparison of SMTP and HTTP<span style="margin-left: 1em"></span></h3>
     <p>
       Both SMTP  and HTTP are protocols for transferring files between hosts.
       They differ significantly in their operation and purpose:
@@ -916,7 +854,7 @@
           </li>
           <li>
             <p>
-              <strong>SMTP</strong>: Both push and pull
+              <strong>SMTP</strong>: Primarily a push protocol.
             </p>
           </li>
         </ul>
@@ -960,22 +898,13 @@
         </ul>
       </li>
     </ol>
-    <h3 id="auto-35">Mail Message Formats<span style="margin-left: 1em"></span></h3>
-    <p>
-      When sending an email, it includes a header with peripheral information,
-      similar to a traditional letter. The header follows the format defined
-      in RFC 5322, which includes required lines such as <code>From:</code>
-      and <code>To:</code>, and can also include optional lines like
-      <code>Subject:</code>. A blank line separates the header from the body
-      of the email.
-    </p>
-    <h3 id="auto-36">Mail Access Protocols<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-34">Mail Access Protocols<span style="margin-left: 1em"></span></h3>
     <p>
       Once an email is sent via SMTP, it is stored in the recipient's mailbox
       on their mail server. Users typically access their email through a mail
       client on their local system rather than directly on the server.
     </p>
-    <h4 id="auto-37">Email Delivery Path:<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-35">Email Delivery Path:<span style="margin-left: 1em"></span></h4>
     <ol>
       <li>
         <p>
@@ -996,7 +925,7 @@
         </p>
       </li>
     </ol>
-    <h3 id="auto-38">POP3 (Post Office Protocol Version 3)<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-36">POP3 (Post Office Protocol Version 3)<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -1031,7 +960,7 @@
         </ul>
       </li>
     </ul>
-    <h4 id="auto-39">Example POP3 Commands:<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-37">Example POP3 Commands:<span style="margin-left: 1em"></span></h4>
     <ol>
       <li>
         <p>
@@ -1066,7 +995,7 @@
         </p>
       </li>
     </ol>
-    <h3 id="auto-40">Limitations of POP3<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-38">Limitations of POP3<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -1083,7 +1012,7 @@
         </p>
       </li>
     </ul>
-    <h3 id="auto-41">IMAP (Internet Mail Access Protocol)<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-39">IMAP (Internet Mail Access Protocol)<span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -1119,7 +1048,7 @@
     <p>
       <img src="Chapter 2-4.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 18.9982368421053em"></img>
     </p>
-    <h2 id="auto-42">9<span style="margin-left: 1em"></span>Domain Name System <span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-40">9<span style="margin-left: 1em"></span>Domain Name System <span style="margin-left: 1em"></span></h2>
     <p>
       DNS primarily operates over the <strong>User Datagram Protocol
       (UDP)</strong>, which allows for low-latency queries. However, it can
@@ -1170,7 +1099,7 @@
       domain name being queried. For example, the <code>.in</code> TLD server
       will know where to find DNS records for <code>iiitd.ac.in</code>.
     </p>
-    <h3 id="auto-43">9.1<span style="margin-left: 1em"></span>DNS LEVELS:<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-41">9.1<span style="margin-left: 1em"></span>DNS LEVELS:<span style="margin-left: 1em"></span></h3>
     <ol>
       <li>
         <p>
@@ -1252,9 +1181,9 @@
     <p>
       Caching is done at local DNS as well.
     </p>
-    <h3 id="auto-44">Example: Host at <code>engineering.nyu.edu</code> wants the IP
+    <h3 id="auto-42">Example: Host at <code>engineering.nyu.edu</code> wants the IP
     address for <code>gaia.cs.umass.edu</code><span style="margin-left: 1em"></span></h3>
-    <h4 id="auto-45"><strong>Iterated Query:</strong><span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-43"><strong>Iterated Query:</strong><span style="margin-left: 1em"></span></h4>
     <p>
       In an <strong>iterated query</strong>, the DNS client (at
       <code>engineering.nyu.edu</code>) asks its local DNS resolver for the IP
@@ -1293,7 +1222,7 @@
       At each step, the queried server replies with the next server to ask,
       and the client does all the querying.
     </p>
-    <h4 id="auto-46"><strong>Recursive Query:</strong><span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-44"><strong>Recursive Query:</strong><span style="margin-left: 1em"></span></h4>
     <p>
       In a <strong>recursive query</strong>, the DNS client (at
       <code>engineering.nyu.edu</code>) asks its <strong>local DNS
@@ -1356,7 +1285,7 @@
     <p>
       
     </p>
-    <h3 id="auto-47">9.2<span style="margin-left: 1em"></span>DNS Records<span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-45">9.2<span style="margin-left: 1em"></span>DNS Records<span style="margin-left: 1em"></span></h3>
     <p>
       <strong>DNS</strong> is a distributed database that stores resource
       records (RR), which map domain names to different types of data.
@@ -1367,7 +1296,7 @@
       <code>ttl</code> (time-to-live, which indicates how long the information
       is valid).
     </p>
-    <h4 id="auto-48">9.2.1<span style="margin-left: 1em"></span>Types of DNS records<span style="margin-left: 1em"></span></h4>
+    <h4 id="auto-46">9.2.1<span style="margin-left: 1em"></span>Types of DNS records<span style="margin-left: 1em"></span></h4>
     <p>
       Type = A: name is the hostname , value is the IP Address corresponding
       to the hostname.
@@ -1385,7 +1314,7 @@
       Type = MX (Mail Exchange ) : Value is the hostname of SMTP server
       associated with the domain
     </p>
-    <h3 id="auto-49">9.3<span style="margin-left: 1em"></span>DMS Protocol Messages <span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-47">9.3<span style="margin-left: 1em"></span>DMS Protocol Messages <span style="margin-left: 1em"></span></h3>
     <ul>
       <li>
         <p>
@@ -1466,7 +1395,7 @@
         </p>
       </li>
     </ul>
-    <h3 id="auto-50">9.4<span style="margin-left: 1em"></span>Getting Info in DNS server <span style="margin-left: 1em"></span></h3>
+    <h3 id="auto-48">9.4<span style="margin-left: 1em"></span>Getting Info in DNS server <span style="margin-left: 1em"></span></h3>
     <p>
       <strong>Registering the domain name:</strong>
     </p>
