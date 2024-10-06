@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <title>Application Layer</title>
+    <meta content="TeXmacs 2.1.4" name="generator" charset="utf-8"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="https://www.texmacs.org/css/web-article.css" type="text/css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><font style="font-size: 168.2%"><strong>Application Layer</strong></font></td>
+          </tr>
+        </table><div class="compact-block" style="margin-top: 1em; margin-bottom: 1em">
+          <table class="title-block">
+            <tr>
+              <td><p style="margin-top: 0.5em; margin-bottom: 0.5em">
+                <div style="display: inline">
+                  <span style="margin-left: 0pt"></span>
+                </div>
+                <table style="display: inline-table; vertical-align: middle">
+                  <tbody><tr>
+                    <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center>
+                      <p>
+                        <class style="font-variant: small-caps">by Aahan Piplani</class>
+                      </p>
+                    </center></td>
+                  </tr></tbody>
+                </table>
+              </p><p style="margin-top: 0.5em; margin-bottom: 0.5em">
+                <div style="display: inline">
+                  <span style="margin-left: 0pt"></span>
+                </div>
+                <table style="display: inline-table; vertical-align: middle">
+                  <tbody><tr>
+                    <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center>
+                      <p>
+                        Computer Networks
+                      </p>
+                    </center></td>
+                  </tr></tbody>
+                </table>
+              </p></td>
+            </tr>
+          </table>
+        </div></td>
+      </tr>
+    </table>
+    <h2 id="auto-1">1<span style="margin-left: 1em"></span>Network application Architectures <span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      We have two types of Network application , one is peer to peer and
+      another is client server architecture :
+    </p>
+    <h3 id="auto-2">1.1<span style="margin-left: 1em"></span>Client Server Architecture<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          The host is always on , called the server , which services the
+          requests from many other hosts called clients
+        </p>
+      </li>
+      <li>
+        <p>
+          clients do NOT communicate with each other 
+        </p>
+      </li>
+      <li>
+        <p>
+          server is fixed and has an addr (IP addr) , for more hosts, more
+          servers are binded togther also called as data centres.
+        </p>
+      </li>
+      <li>
+        <p>
+          eg WEB , FTP , Telnet and email.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-3">1.2<span style="margin-left: 1em"></span>P2P <span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          The application exploits direct communication between pairs of
+          intermittently connected hosts, called peers.
+        </p>
+      </li>
+      <li>
+        <p>
+          Minimal or no reliance on dedicated serves in the data centers ,
+        </p>
+      </li>
+      <li>
+        <p>
+          The peers are not owned by the service provider, but are instead
+          desktops and laptops controlled by users
+        </p>
+      </li>
+      <li>
+        <p>
+          They are <b>Self Scalable </b>&ndash; although each peer generates
+          workload by requesting files, each peer also adds service capacity
+          to the system by distributing files to other peers. P2P
+          architectures are also cost effective, since they normally don't
+          require significant server infrastructure and server bandwidth.
+        </p>
+      </li>
+      <li>
+        <p>
+          They face challenges of security, performance, and reliability due
+          to their highly decentralized structure.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-4">2<span style="margin-left: 1em"></span>Processes Communication <span style="margin-left: 1em"></span></h2>
+    <p>
+      We communicate between the processes ( a program running on a machine )
+    </p>
+    <p>
+      Processes on two different end systems communicate with each other by
+      exchanging messages across the computer network.
+    </p>
+    <p>
+      A sending process creates and sends messages into the network; a
+      receiving process receives these messages and possibly responds by
+      sending messages back.
+    </p>
+    <h3 id="auto-5">2.1<span style="margin-left: 1em"></span>Client Server Processes <span style="margin-left: 1em"></span></h3>
+    <p>
+      In the context of a communication session between a pair of processes,
+      the process that initiates the communication (that is, initially
+      contacts the other process at the beginning of the session) is labeled
+      as the client. The process that waits to be contacted to begin the
+      session is the server.
+    </p>
+    <p>
+      Sockets are used to communicate between the processes , a socket is pair
+      of ip address(for identi-fying the machine) and port id (for identifying
+      process)
+    </p>
+    <p>
+      
+    </p>
+    <h2 id="auto-6">3<span style="margin-left: 1em"></span>Transport Services Available to
+    Applications<span style="margin-left: 1em"></span></h2>
+    <p>
+      When designing an app , the choice of transport-layer protocol is
+      crucial since it directly impacts how data is delivered between
+      communicating processes. The available transport services can be
+      classified into four major dimensions:
+    </p>
+    <h3 id="auto-7">3.1<span style="margin-left: 1em"></span>Data Integrity (Reliable Data Transfer) 
+    <span style="margin-left: 1em"></span></h3>
+    <p>
+      Relaible data ensures that all the data is sent safely , and in some
+      cases its okay to loose the data eg mutlimedia.
+    </p>
+    <h3 id="auto-8">3.2<span style="margin-left: 1em"></span>Timing <span style="margin-left: 1em"></span></h3>
+    <p>
+      Timing guarantees relate to the delivery time of data between the sender
+      and receiver. Non-real-time applications don't require strict timing
+      guarantees but generally prefer lower delays.
+    </p>
+    <h3 id="auto-9">3.3<span style="margin-left: 1em"></span>Throughput <span style="margin-left: 1em"></span></h3>
+    <p>
+      Throughput refers to the rate at which data is delivered between
+      processes. Some applications, especially multimedia ones, need
+      guaranteed throughput (e.g., 32 kbps for Internet telephony). These
+      bandwidth-sensitive applications require sufficient data rates to
+      function effectively. 
+    </p>
+    <h3 id="auto-10">3.4<span style="margin-left: 1em"></span>Security <span style="margin-left: 1em"></span></h3>
+    <p>
+      Transport-layer protocols can offer security services like encryption
+      for confidentiality, ensuring that transmitted data is kept secure
+      between sender and receiver. Additional security features may include
+      data integrity (to ensure no tampering) and end-point authentication
+      (verifying the identity of communication partners).
+    </p>
+    <h2 id="auto-11">4<span style="margin-left: 1em"></span>Transport Services Provided by the Internet
+    <span style="margin-left: 1em"></span></h2>
+    <p>
+      The Internet offers two primary transport protocols: TCP and UDP. Each
+      has distinct services:
+    </p>
+    <p>
+      &bull;  TCP provides reliable data transfer, congestion control, and
+      ensures data integrity, making it suitable for applications that require
+      guaranteed delivery.
+    </p>
+    <p>
+      &bull;  UDP is faster but does not provide reliability or congestion
+      control, making it ideal for real-time or loss-tolerant applications,
+      such as streaming and gaming.
+    </p>
+    <ol>
+      <li>
+        <p>
+          TCP does not provide timing , min throughput guarantee , security
+          but it is reliable  and used in places like email , web , file
+          transfer , remote terminal access etc.
+        </p>
+      </li>
+      <li>
+        <p>
+          UDP doesnt provide reliability , flow control ,<span style="margin-left: 0.16665em"></span>.<span
+          style="margin-left: 0.16665em"></span>.<span style="margin-left: 0.16665em"></span>.<span style="margin-left: 0.16665em"></span> but it is
+          still needed for multimedia where there is no need of robust
+          consistent connection as such. eg gaming and multimedia
+        </p>
+      </li>
+    </ol>
+    <p>
+      <div style="display: inline">
+        <a id="auto-12"></a>
+      </div>
+      <h5><span style="margin-left: 1em"></span></h5>
+    </p>
+    <h2 id="auto-13">5<span style="margin-left: 1em"></span>The web and HTTP :<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-14">5.1<span style="margin-left: 1em"></span>HTTP overview<span style="margin-left: 1em"></span></h3>
+    <p>
+      Hyper test transfer protocol 
+    </p>
+    <p>
+      works using a client server model , where brower (client) sends requests
+      , and server responds with web objects.
+    </p>
+    <p>
+      HTTP relies on TCP as a transport protocol providing reliable data
+      transfer.
+    </p>
+    <h3 id="auto-15">5.2<span style="margin-left: 1em"></span>Stateless protocol <span style="margin-left: 1em"></span></h3>
+    <p>
+      HTTP is stateless, meaning the server does not retain information about
+      the client between requests. 
+    </p>
+    <p>
+      <b>If a client requests the same object multiple times, the server
+      treats each request independently, resending the object without
+      retaining memory of prior transactions.</b>
+    </p>
+    <h3 id="auto-16">5.3<span style="margin-left: 1em"></span>Connection types<span style="margin-left: 1em"></span></h3>
+    <h4 id="auto-17">5.3.1<span style="margin-left: 1em"></span>Non persistent connection :<span style="margin-left: 1em"></span></h4>
+    <p>
+      each request uses one tcp connection to communicate with the server ,
+      for example we need 11 objects we will hae to incur 11 tcp connections 
+    </p>
+    <p>
+      it is a less efficient method , coz for each objet it takes two RTT<span
+      style="margin-left: 1em"></span>: one for establishing the connection and one for
+      transferring the object.
+    </p>
+    <h4 id="auto-18">5.3.2<span style="margin-left: 1em"></span>Persistent connection :<span style="margin-left: 1em"></span></h4>
+    <p>
+      It was introduced in HTTP 1.1 , the same TCP connection is reused
+      multiple times requests and responses. This reduces the load and
+      improves efficieny.
+    </p>
+    <h4 id="auto-19">5.3.3<span style="margin-left: 1em"></span>Performance Implications <span style="margin-left: 1em"></span></h4>
+    <p>
+      Non-persistent connections require more resources as they involve
+      creating and maintaining new TCP connections for each object.
+    </p>
+    <p>
+      Persistent connections reduce the load on servers and clients by reusing
+      TCP connections, allowing faster delivery of multiple objects and
+      improving overall response time.
+    </p>
+    <h3 id="auto-20">5.4<span style="margin-left: 1em"></span>HTTP Request Message <span style="margin-left: 1em"></span></h3>
+    <p>
+      An HTTP request consists of the <strong>request line</strong> and
+      <strong>header lines</strong>:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Request line</strong>: Contains the method (e.g., GET, POST,
+          HEAD), URL, and HTTP version. The method determines the action to be
+          performed, with GET being the most common for fetching objects from
+          the server.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Header lines</strong>: Include information like the host
+          (e.g., <code>Host: www.someschool.edu</code>), the connection type
+          (e.g., <code>Connection: close</code>), the user-agent (e.g.,
+          browser information), and content negotiation details like language
+          preferences (e.g., <code>Accept-language: fr</code>).
+        </p>
+      </li>
+      <li>
+        <p>
+          The request may also include an <strong>entity body</strong> if the
+          method is POST, which is used to send data to the server, such as
+          form inputs.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-21">5.5<span style="margin-left: 1em"></span>HTTP Response Message<span style="margin-left: 1em"></span></h3>
+    <p>
+      An HTTP response includes:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Status line</strong>: Contains the protocol version, a
+          status code (e.g., <code>200 OK</code> for successful requests), and
+          a status message.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Header lines</strong>: Provide additional metadata, such as
+          connection status (e.g., <code>Connection: close</code>), the date
+          the response was sent, the server type (e.g., <code>Server:
+          Apache/2.2.3</code>), the last modification time of the requested
+          object (<code>Last-Modified</code>), and the content type (e.g.,
+          <code>Content-Type: text/html</code>).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Entity body</strong>: Contains the requested object or data
+          (e.g., HTML content).
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-22">5.6<span style="margin-left: 1em"></span>Status Codes<span style="margin-left: 1em"></span></h3>
+    <p>
+      Common status codes include:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>200 OK</strong>: Request succeeded.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>301 Moved Permanently</strong>: The requested object has
+          been permanently moved to a new URL.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>400 Bad Request</strong>: The request is malformed.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>404 Not Found</strong>: The requested object is not found.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>505 HTTP Version Not Supported</strong>: The server does not
+          support the requested version.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-23">HTTP METHODS<span style="margin-left: 1em"></span></h2>
+    <p>
+      ;
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>GET</strong>: Requests data from a specified resource
+          (typically retrieves web pages or other data).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>POST</strong>: Sends data to the server, often used for
+          submitting form data or uploading files.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>HEAD</strong>: Similar to GET, but only retrieves the
+          headers, not the body, of a response.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>PUT</strong>: Uploads or replaces a resource on the server
+          at the specified URL.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>DELETE</strong>: Deletes the specified resource on the
+          server.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-24">HTTP Versions:<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          <strong>HTTP/1.0</strong>: Supports <strong>GET</strong>,
+          <strong>POST</strong>, and <strong>HEAD</strong> methods.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>HTTP/1.1</strong>: Adds support for <strong>PUT</strong> and
+          <strong>DELETE</strong> methods in addition to those from HTTP/1.0.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-25">Why is there a need to cache or cookies ?<span style="margin-left: 1em"></span></h3>
+    <p>
+      take an example where client asks to lock the data record X , 
+    </p>
+    <p>
+      changes X to <img src="Chapter 2-2.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105263em; margin-top: -0.0142368421052631em; vertical-align: -0.161078947368421em; height: 0.956026315789474em"></img>
+    </p>
+    <p>
+      changes <img src="Chapter 2-3.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105267em; margin-top: -0.0142368421052631em; vertical-align: -0.161078947368421em; height: 0.956026315789474em"></img> at time <span class="no-breaks"><img src="Chapter 2-4.png" style="margin-left: 0.0645em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.011421052631579em; vertical-align: 0em; height: 0.988763157894737em"></img>.</span>
+    </p>
+    <p>
+      then unlocks the record at storing <img src="Chapter 2-5.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0134736842105263em; margin-right: -0.0134736842105263em; margin-top: -0.0142368421052631em; vertical-align: -0.161078947368421em; height: 0.956026315789474em"></img> in X.
+    </p>
+    <p>
+      What if the system Crashes at <span class="no-breaks"><img src="Chapter 2-6.png" style="margin-left: 0.0645em; margin-bottom: -0.0202105263157895em; margin-right: -0.0134736842105263em; margin-top: -0.011421052631579em; vertical-align: 0em; height: 0.988763157894737em"></img>Since</span>
+      HTTP is stateless , we wont know what was the previous transaction ?
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Your example conveys a valid point but can be refined a bit to better
+      emphasize why <strong>cookies</strong> and <strong>cache</strong> are
+      needed, especially in the context of HTTP's statelessness. Here's a
+      breakdown of the issues and suggestions for improvement:
+    </p>
+    <p>
+      <hr></hr>
+    </p>
+    <h3 id="auto-26">Revised Explanation:<span style="margin-left: 1em"></span></h3>
+    <p>
+      Since <strong>HTTP is stateless</strong>, the server doesn't retain
+      information between requests, which means that each new request is
+      treated independently. In your example, the client:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Locks the data record X</strong>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Modifies X to X&#x2081;</strong>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Further modifies X&#x2081; to X&#x2082; at time t~</strong>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Unlocks the record</strong> by storing X&#x2082; as the new
+          X.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Now, if the <strong>system crashes at time t~</strong>, the server will
+      have no memory of the previous operations (because of statelessness), so
+      it won't know what the last transaction was. As a result, critical
+      updates may be lost or inconsistent, which could lead to issues like
+      stale data or incomplete transactions.
+    </p>
+    <p>
+      <strong>Cookies</strong> and <strong>cache</strong> help mitigate this
+      problem by enabling the server and client to maintain session state
+      across multiple HTTP requests:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Cookies</strong>: Used to store session-specific
+          information, like authentication or user state, across requests. In
+          your example, a cookie might store the session details, indicating
+          which record (X) is locked and what changes have been made. Even if
+          the server crashes, this session data can be recovered.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Cache</strong>: Used to store frequently accessed data,
+          reducing the need for repeated fetches and improving performance. In
+          this case, cached data could store the intermediate states
+          (X&#x2081;, X&#x2082;) to prevent reprocessing if the system fails.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-27">6<span style="margin-left: 1em"></span>Maintaining user server/state using
+    COOKIES<span style="margin-left: 1em"></span></h2>
+    <p>
+      Here's a brief explanation of the four components involved in how
+      <strong>cookies</strong> work within HTTP communication:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Cookie Header Line in HTTP Response Message</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              When a client (browser) sends a request to a web server, the
+              server can respond with an HTTP response message that includes a
+              <strong>Set-Cookie</strong> header. This header sets a cookie in
+              the user's browser. For example, it might look like this:
+            </p>
+            <pre class="verbatim" xml:space="preserve">
+<code>Set-Cookie: sessionId=abc123; Expires=Wed, 09 Oct 2024 23:12:40 GMT</code></pre>
+            <p>
+              This instructs the browser to store the cookie, which contains
+              specific information (e.g., session ID) from the server.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Cookie Header Line in Next HTTP Request Message</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              On subsequent requests, the browser automatically includes the
+              cookie in the <strong>Cookie</strong> header line of the HTTP
+              request. This allows the server to recognize the user and
+              maintain session state. For example:
+            </p>
+            <pre class="verbatim" xml:space="preserve">
+
+<code>Cookie: sessionId=abc123
+
+</code></pre>
+            <p>
+              This informs the server that the user is continuing a session
+              that was previously initiated.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Cookie File Kept on User's Host, Managed by User's
+          Browser</strong>:
+        </p>
+        <ul>
+          <li>
+            The browser on the client's side stores cookies locally in a file
+            on the user's device. The file is managed by the browser and
+            contains all the cookies for various websites the user has
+            visited. It ensures that the correct cookies are sent with the
+            appropriate web requests.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Back-End Database at Web Site</strong>:
+        </p>
+        <ul>
+          <li>
+            On the server side, a back-end database maintains records linked
+            to the cookies, like session information, user preferences, or
+            login status. For example, when a user's browser sends the cookie
+            back to the server, the server can look up the session ID in the
+            database to retrieve the corresponding data and continue the
+            session seamlessly.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h3 id="auto-28">How They Work Together:<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          When a user visits a website, the server sends a cookie (via the
+          <strong>Set-Cookie</strong> header).
+        </p>
+      </li>
+      <li>
+        <p>
+          The browser stores this cookie locally.
+        </p>
+      </li>
+      <li>
+        <p>
+          For subsequent requests to the same website, the browser includes
+          the stored cookie in the request headers.
+        </p>
+      </li>
+      <li>
+        <p>
+          The server then uses the cookie to retrieve related information from
+          its back-end database, enabling it to keep track of the user's
+          session, preferences, and more.
+        </p>
+      </li>
+    </ul>
+    <p>
+      This mechanism allows the server to &ldquo;remember&rdquo; the user
+      across different requests in an otherwise stateless protocol like HTTP.
+    </p>
+    <h2 id="auto-29">7<span style="margin-left: 1em"></span>What is Web Cache ? <span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-30">Web Cache Functionality<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <ul>
+        <li>
+          The user configures their web browser to point to a local web cache.
+          This cache acts as an intermediary between the client and the origin
+          server, storing copies of frequently requested web content.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          When the browser sends an HTTP request, it first goes to the cache
+          instead of directly contacting the origin server.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <strong>If the Object is in the Cache</strong>:
+          </p>
+          <ul>
+            <li>
+              The cache checks if the requested object is already stored. If
+              it is, the cache retrieves the object and sends it back to the
+              client, resulting in a faster response time.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            <strong>If the Object is Not in the Cache</strong>:
+          </p>
+          <ul>
+            <li>
+              <p>
+                If the requested object is not found, the cache makes a
+                request to the origin server to fetch the object. Once
+                received, the cache stores a copy of the object for future
+                requests before returning it to the client.
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </ol>
+    <p>
+      
+    </p>
+    <p>
+      Features of FTP
+    </p>
+    <p>
+      It;s a client server model , connection oriented protocol - uses tcp 
+    </p>
+    <p>
+      seperate data and control connections -&gt; 
+    </p>
+    <p>
+      <strong>Control Connection</strong>:
+    </p>
+    <ul>
+      <li>
+        <p>
+          Established on server port 21, used for sending commands and
+          receiving responses.
+        </p>
+      </li>
+      <li>
+        <p>
+          Operates as an &ldquo;out-of-band&rdquo; channel, meaning it's
+          separate from data transfers.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Data Connection</strong>:
+    </p>
+    <ul>
+      <li>
+        <p>
+          Established on server port 20 for transferring files.
+        </p>
+      </li>
+      <li>
+        <p>
+          A new data connection is created for each file transfer.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Stateful Protocol</strong>:
+    </p>
+    <ul>
+      <li>
+        <p>
+          The FTP server maintains the session state, which includes:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Authentication State</strong>: Keeping track of whether
+              a client is logged in.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Current Directory</strong>: Tracking the directory the
+              client is currently working in.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="auto-31">Working of FTP<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <strong>Establishing Control Connection</strong>:
+        </p>
+        <ul>
+          <li>
+            The client connects to the server using port 21 to establish a
+            control connection.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Client Authentication</strong>:
+        </p>
+        <ul>
+          <li>
+            The client sends authentication commands (e.g., <code>USER</code>
+            and <code>PASS</code>) to log in to the server.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Directory Browsing and Command Execution</strong>:
+        </p>
+        <ul>
+          <li>
+            The client can send commands to browse directories, list files,
+            and perform read/write operations.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Opening Data Connection</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              When a file transfer command (like <code>RETR</code> for
+              retrieving files or <code>STOR</code> for storing files) is
+              issued, the server opens a new data connection to transfer the
+              specified file.
+            </p>
+          </li>
+          <li>
+            <p>
+              Once the transfer is completed, the data connection is closed.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Terminating the Connection</strong>:
+        </p>
+        <ul>
+          <li>
+            The client can terminate the control connection when it's done.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h3 id="auto-32">Sample Commands<span style="margin-left: 1em"></span></h3>
+    <p>
+      FTP commands are sent as ASCII text over the control connection. Here
+      are some common commands:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>USER username</strong>: Initiates user login.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>PASS password</strong>: Provides the password for the user.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>LIST</strong>: Retrieves and returns a list of files in the
+          current directory.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>RETR filename</strong>: Downloads (retrieves) the specified
+          file from the server.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>STOR filename</strong>: Uploads (stores) the specified file
+          onto the remote server.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-33">Sample Return Codes<span style="margin-left: 1em"></span></h3>
+    <p>
+      FTP responses are accompanied by status codes, which provide information
+      about the success or failure of the commands. Some common return codes
+      include:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>331</strong>: Username OK, password required.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>125</strong>: Data connection already open; transfer
+          starting.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>425</strong>: Can't open data connection (e.g., due to
+          firewall issues).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>452</strong>: Error writing file (e.g., insufficient disk
+          space on the server).
+        </p>
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <p>
+      FTP is a widely used protocol for file transfer, providing essential
+      functions for client-server communication. Its design separates the
+      control and data connections, ensuring efficient and reliable file
+      transfers. Despite its utility, security concerns led to the development
+      of secure alternatives like FTPS (FTP Secure) and SFTP (SSH File
+      Transfer Protocol).
+    </p>
+    <p>
+      
+    </p>
+    <h2 id="auto-34">8<span style="margin-left: 1em"></span>Emails <span style="margin-left: 1em"></span></h2>
+    <p>
+      Three components <img src="Chapter 2-7.png" style="margin-left: -0.0134736842105263em; margin-bottom: -0.0157368421052632em; margin-right: -0.0134736842105312em; margin-top: -0.0135em; vertical-align: -0.280684210526316em; height: 1.152em"></img>
+    </p>
+    <p>
+      Two components of Mail servers : Mail box , Message queue 
+    </p>
+    <h3 id="auto-35">SMTP Characteristics<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          SMTP does not generally utilize intermediate servers, establishing a
+          direct TCP connection between sending and receiving mail servers.
+        </p>
+      </li>
+      <li>
+        <p>
+          If the recipient's server is down, the sending server holds the
+          message in a queue and retries delivery later.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-36">SMTP Commands Example<span style="margin-left: 1em"></span></h3>
+    <p>
+      The following is an example of a dialogue between an SMTP client and
+      server:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Connection Establishment</strong>:<br /><code>S: 220
+          hamburger.edu</code> (Greeting from the server)
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Client Commands</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <code>C: HELO crepes.fr</code> (Client introduces itself)
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>C: MAIL FROM: &lt;alice@crepes.fr&gt;</code> (Specifying
+              sender)
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>C: RCPT TO: &lt;bob@hamburger.edu&gt;</code> (Specifying
+              recipient)
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>C: DATA</code> (Indicating the beginning of the message)
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>C: Do you like ketchup?</code> (Message content)
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>C: How about pickles?</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>C: .</code> (Indicating the end of the message)
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>C: QUIT</code> (Ending the session)
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h3 id="auto-37">Comparison of SMTP and HTTP<span style="margin-left: 1em"></span></h3>
+    <p>
+      Both SMTP  and HTTP are protocols for transferring files between hosts.
+      They differ significantly in their operation and purpose:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Nature of Operation</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>HTTP</strong>: Primarily a pull protocol. Users request
+              files from a web server, initiating a TCP connection to receive
+              the files.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>SMTP</strong>: Both push and pull
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Data Format</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>HTTP</strong>: it can handle various media types without
+              restriction.[no encoding]
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>SMTP</strong>: Requires that all messages be in 7-bit
+              ASCII format. 
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Handling of Documents</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>HTTP</strong>: Each object is encapsulated in its own
+              HTTP response message.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>SMTP</strong>: All objects in an email are placed within
+              a single message.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h3 id="auto-38">Mail Message Formats<span style="margin-left: 1em"></span></h3>
+    <p>
+      When sending an email, it includes a header with peripheral information,
+      similar to a traditional letter. The header follows the format defined
+      in RFC 5322, which includes required lines such as <code>From:</code>
+      and <code>To:</code>, and can also include optional lines like
+      <code>Subject:</code>. A blank line separates the header from the body
+      of the email.
+    </p>
+    <h3 id="auto-39">Mail Access Protocols<span style="margin-left: 1em"></span></h3>
+    <p>
+      Once an email is sent via SMTP, it is stored in the recipient's mailbox
+      on their mail server. Users typically access their email through a mail
+      client on their local system rather than directly on the server.
+    </p>
+    <h4 id="auto-40">Email Delivery Path:<span style="margin-left: 1em"></span></h4>
+    <ol>
+      <li>
+        <p>
+          <strong>Sending</strong>: Alice's email client sends the email to
+          her mail server using SMTP.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Relaying</strong>: Alice's mail server then relays the email
+          to Bob's mail server using SMTP.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Receiving</strong>: Bob retrieves the email from his mail
+          server using a mail access protocol like POP3 or IMAP.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-41">POP3 (Post Office Protocol Version 3)<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          <strong>Functionality</strong>: POP3 is a simple protocol allowing
+          users to download emails from the server to their local machine. It
+          operates over TCP on port 110.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Phases</strong>:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Authorization</strong>: User provides a username and
+              password.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Transaction</strong>: Users can retrieve messages, mark
+              them for deletion, and obtain mail statistics.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Update</strong>: After logging off, the server deletes
+              any marked messages.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h4 id="auto-42">Example POP3 Commands:<span style="margin-left: 1em"></span></h4>
+    <ol>
+      <li>
+        <p>
+          <code>user &lt;username&gt;</code>: Send username for
+          authentication.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>pass &lt;password&gt;</code>: Send password for
+          authentication.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>list</code>: Retrieve a list of messages.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>retr &lt;msg_id&gt;</code>: Retrieve a specific message.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>dele &lt;msg_id&gt;</code>: Mark a message for deletion.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>quit</code>: End the session.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-43">Limitations of POP3<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          <strong>Download-and-Delete Mode</strong>: Messages are removed from
+          the server after downloading, which can lead to messages being
+          inaccessible from multiple devices.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Download-and-Keep Mode</strong>: Messages remain on the
+          server, allowing access from various devices but does not maintain
+          state information across sessions.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-44">IMAP (Internet Mail Access Protocol)<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          <strong>Functionality</strong>: IMAP offers more features than POP3,
+          enabling users to manage their email on a remote server rather than
+          just downloading it.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Folder Management</strong>: Users can create folders, move
+          messages, and maintain state information across sessions.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Message Access</strong>: IMAP allows retrieval of specific
+          message components, such as headers or parts of multipart messages,
+          which is beneficial for users with low-bandwidth connections.
+        </p>
+      </li>
+    </ul>
+    <p>
+      In summary, while both SMTP and HTTP facilitate file transfers, their
+      protocols serve different purposes, with SMTP focused on email delivery
+      and HTTP on web content retrieval. Mail access protocols like POP3 and
+      IMAP provide mechanisms for users to interact with their emails
+      effectively.
+    </p>
+    <p>
+      <img src="Chapter 2-8.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 25.8656052631579em"></img>
+    </p>
+    <p>
+      <img src="Chapter 2-9.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 18.9982368421053em"></img>
+    </p>
+    <h2 id="auto-45">9<span style="margin-left: 1em"></span>Domain Name System <span style="margin-left: 1em"></span></h2>
+    <p>
+      DNS primarily operates over the <strong>User Datagram Protocol
+      (UDP)</strong>, which allows for low-latency queries. However, it can
+      also run over <strong>TCP</strong> for tasks that require reliable
+      delivery, such as zone transfers between DNS servers.
+    </p>
+    <p>
+      Q: Why not centralize DNS?
+    </p>
+    <p>
+      &#x25CF; single point of failure
+    </p>
+    <p>
+      &#x25CF; traffic volume
+    </p>
+    <p>
+      &#x25CF; distant centralized database
+    </p>
+    <p>
+      &#x25CF; maintenance
+    </p>
+    <p>
+      dns servers efficiently control the traffic, for example for emails
+      instead of using a long or complex mail server name, an alias (like
+      <code>mail.example.com</code>) can be set up to redirect email traffic
+      to the actual mail server, enhancing usability and management.
+    </p>
+    <p>
+      DNS can help distribute load among multiple servers to manage traffic
+      efficiently. This is particularly useful for high-traffic websites.
+    </p>
+    <p>
+      This means that many IP addresses can correspond to one hostname,
+      allowing for redundancy, reliability, and better performance.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Root DNS server: at the top of the DNS hierarchy , resposible to direct
+      the queries to TLD servers(top level domain) servers.root stores domain
+      suffixes like .com , .org, .edu
+    </p>
+    <p>
+      TLD servers : root DNS is split into various top level domain servers ,
+      The TLD DNS servers are responsible for specific domain extensions. They
+      direct queries to the <strong>authoritative DNS servers</strong> of the
+      domain name being queried. For example, the <code>.in</code> TLD server
+      will know where to find DNS records for <code>iiitd.ac.in</code>.
+    </p>
+    <h3 id="auto-46">9.1<span style="margin-left: 1em"></span>DNS LEVELS:<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <strong>Root DNS</strong>:
+        </p>
+        <ul>
+          <li>
+            This is the highest level in the DNS hierarchy. It knows where to
+            find the servers for the top-level domains (TLDs), like
+            <code>.com</code>, <code>.org</code>, or <code>.net</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>TLD DNS (Top-Level Domain DNS)</strong>:
+        </p>
+        <ul>
+          <li>
+            These servers handle specific TLDs. For example, the
+            <code>.com</code> TLD DNS knows where to find the authoritative
+            servers for all domain names ending in <code>.com</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Authoritative DNS</strong>:
+        </p>
+        <ul>
+          <li>
+            These servers contain the actual mappings of domain names to IP
+            addresses for specific domains. They provide the final answer when
+            someone queries a domain name, like <code>example.com</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Local DNS (or Recursive DNS)</strong>:
+        </p>
+        <ul>
+          <li>
+            This is usually provided by your Internet Service Provider (ISP).
+            It acts as a middleman, taking your requests for domain names and
+            looking them up from the root, TLD, and authoritative servers to
+            return the correct IP address to you.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <p>
+      In summary:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Root DNS</strong> directs to TLDs.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>TLD DNS</strong> directs to authoritative servers.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Authoritative DNS</strong> gives the final IP address for a
+          domain.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Local DNS</strong> (or recursive) handles queries from
+          users, finding the information through the other DNS servers.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Caching is done at local DNS as well.
+    </p>
+    <h3 id="auto-47">Example: Host at <code>engineering.nyu.edu</code> wants the IP
+    address for <code>gaia.cs.umass.edu</code><span style="margin-left: 1em"></span></h3>
+    <h4 id="auto-48"><strong>Iterated Query:</strong><span style="margin-left: 1em"></span></h4>
+    <p>
+      In an <strong>iterated query</strong>, the DNS client (at
+      <code>engineering.nyu.edu</code>) asks its local DNS resolver for the IP
+      address of <code>gaia.cs.umass.edu</code>. Here's what happens:
+    </p>
+    <ol>
+      <li>
+        <p>
+          The <strong>local DNS resolver</strong> doesn't know the IP but
+          responds with the address of a root DNS server.
+        </p>
+      </li>
+      <li>
+        <p>
+          The client asks the <strong>root DNS server</strong>, which responds
+          with the address of a top-level domain (TLD) DNS server (e.g.,
+          <code>.edu</code> server).
+        </p>
+      </li>
+      <li>
+        <p>
+          The client asks the <strong>TLD DNS server</strong>, which gives the
+          address of the <strong>authoritative DNS server</strong> for
+          <code>umass.edu</code>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Finally, the client asks the <strong>authoritative DNS
+          server</strong> for <code>umass.edu</code>, which responds with the
+          IP address of <code>gaia.cs.umass.edu</code>.
+        </p>
+      </li>
+    </ol>
+    <p>
+      At each step, the queried server replies with the next server to ask,
+      and the client does all the querying.
+    </p>
+    <h4 id="auto-49"><strong>Recursive Query:</strong><span style="margin-left: 1em"></span></h4>
+    <p>
+      In a <strong>recursive query</strong>, the DNS client (at
+      <code>engineering.nyu.edu</code>) asks its <strong>local DNS
+      resolver</strong> for the IP address of <code>gaia.cs.umass.edu</code>,
+      but here:
+    </p>
+    <ol>
+      <li>
+        <p>
+          The <strong>local DNS resolver</strong> takes full responsibility
+          and queries other DNS servers on behalf of the client.
+        </p>
+      </li>
+      <li>
+        <p>
+          It starts by querying the <strong>root DNS server</strong>, then the
+          <strong>TLD DNS server</strong> (e.g., <code>.edu</code>), and
+          finally the <strong>authoritative DNS server</strong> for
+          <code>umass.edu</code>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Once the local DNS resolver gets the IP from the authoritative
+          server, it sends the answer back to the client.
+        </p>
+      </li>
+    </ol>
+    <p>
+      In recursive queries, the client only contacts its local DNS resolver,
+      and the burden of querying the entire DNS hierarchy falls on the
+      resolver. This can lead to a heavy load on upper-level DNS servers.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Iterated query</strong>: The client performs each step by
+          contacting multiple servers until it gets the answer. This
+          distributes the load across the DNS hierarchy.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Recursive query</strong>: The local DNS resolver handles all
+          the querying steps, reducing client involvement but increasing the
+          resolver's workload.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Both methods aim to resolve a domain name to its corresponding IP
+      address but handle the querying process differently.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <img src="Chapter 2-10.png" style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 16.718052631579em"></img>
+    </p>
+    <p>
+      
+    </p>
+    <h3 id="auto-50">9.2<span style="margin-left: 1em"></span>DNS Records<span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>DNS</strong> is a distributed database that stores resource
+      records (RR), which map domain names to different types of data.
+    </p>
+    <p>
+      <strong>RR format:</strong> It contains fields such as
+      <code>name</code>, <code>value</code>, <code>type</code>, and
+      <code>ttl</code> (time-to-live, which indicates how long the information
+      is valid).
+    </p>
+    <h4 id="auto-51">9.2.1<span style="margin-left: 1em"></span>Types of DNS records<span style="margin-left: 1em"></span></h4>
+    <p>
+      Type = A: name is the hostname , value is the IP Address corresponding
+      to the hostname.
+    </p>
+    <p>
+      Type = NS(Name Server):name is the domain name , value is the hostname
+      of authoritative name server of the domain.
+    </p>
+    <p>
+      Type = CNAME(Canonical Name) : name is an alias for some canonical (real
+      ) name, value is the canonical name , eg www.ibm.com is an alias for
+      servereast.backup2.ibm.com
+    </p>
+    <p>
+      Type = MX (Mail Exchange ) : Value is the hostname of SMTP server
+      associated with the domain
+    </p>
+    <h3 id="auto-52">9.3<span style="margin-left: 1em"></span>DMS Protocol Messages <span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          DNS uses query and reply messages that share the same format.
+        </p>
+      </li>
+      <li>
+        <p>
+          The message consists of a header followed by various sections.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Message header fields:</strong>
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Identification</strong>: A 16-bit number used for both query
+          and reply to match them.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Flags</strong>: Includes various bits that indicate:
+        </p>
+        <ul>
+          <li>
+            <p>
+              Whether the message is a query or reply.
+            </p>
+          </li>
+          <li>
+            <p>
+              Whether recursion is desired (the server should continue
+              searching if it doesn't have an answer).
+            </p>
+          </li>
+          <li>
+            <p>
+              Whether recursion is available (the server supports recursive
+              queries).
+            </p>
+          </li>
+          <li>
+            <p>
+              Whether the reply is authoritative (it comes from a server with
+              definitive information).
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      What is there in the DNS query reply ?
+    </p>
+    <p>
+      Sections of the DNS message mainly contains :
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Questions</strong>: Contains the query's <code>name</code>
+          and <code>type</code> (what information is being requested).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Answers</strong>: Includes resource records (RRs) in
+          response to the query, containing the requested data (e.g., IP
+          addresses).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Authority</strong>: Provides records for the authoritative
+          name servers that are responsible for the domain.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-53">9.4<span style="margin-left: 1em"></span>Getting Info in DNS server <span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Registering the domain name:</strong>
+    </p>
+    <ul>
+      <li>
+        You first register your desired domain name (e.g.,
+        <strong>iiitd.ac.in</strong>) with a DNS registrar such as GoDaddy
+        India, BigRock India etc.
+      </li>
+    </ul>
+    <p>
+      <strong>Providing authoritative name server details:</strong>
+    </p>
+    <ul>
+      <li>
+        After registration, you need to supply the names and IP addresses of
+        your <strong>authoritative name servers</strong> (both primary and
+        secondary servers).
+      </li>
+    </ul>
+    <p>
+      <strong>Inserting NS (Name Server) and A (Address) records:</strong>
+    </p>
+    <ul>
+      <li>
+        <p>
+          The registrar inserts these records (NS, A) into the
+          <strong>.in</strong> Top Level Domain (TLD) server.
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>NS Record</strong>: Defines the authoritative DNS
+              servers for the domain (e.g., iiitd.ac.in).
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>A Record</strong>: Maps the domain name (e.g.,
+              dns1.iiitd.ac.in) to an IP address (e.g., 103.25.231.30).
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      <strong>Creating an authoritative server:</strong>
+    </p>
+    <ul>
+      <li>
+        <p>
+          On your local authoritative server, you configure:
+        </p>
+        <ul>
+          <li>
+            <p>
+              A <strong>type A record</strong> for <strong><a href="http://www.iiitd.ac.in">www.iiitd.ac.in</a></strong>
+              (which resolves to an IP address).
+            </p>
+          </li>
+          <li>
+            <p>
+              A <strong>type MX record</strong> for
+              <strong>iiitd.ac.in</strong> (which specifies mail exchange
+              servers for handling email for the domain).
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
